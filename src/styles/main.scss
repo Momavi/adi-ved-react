@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+body {
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0px auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+li {
+  list-style-type: none
+}
+
+@layer components {
+  .navigation{
+    margin: 0 40px;
+  }
+
+  .nav-text {
+    font-family: 'TT Travels';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  .logo-text {
+    font-family: 'TT Travels';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #37DBFF;
+  }
+
+  .number-text {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .bg-dark {
+    background: linear-gradient(10.85deg, #16151be6 -18.29%, #16151B 26.5%);
+  }
+
+  .nav-btn {
+    font-family: 'TT Travels';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    background: linear-gradient(92.57deg, #13A6C7 0%, rgba(12, 103, 239, 0.7) 100%);
+    border-radius: 25px;
+    padding: 5px 15px;
+  }
+}

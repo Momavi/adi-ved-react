@@ -1,0 +1,78 @@
+.logo {
+  font-family: 'TT Travels';
+  font-style: italic;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 77px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+  color: #37DBFF;
+  text-align: start;
+
+  &-shadow {
+    position: relative;
+    bottom: 50px;
+    left: 30px;
+    width: 395px;
+    height: 14px;
+    /* Rectangle 3 */
+
+  }
+}
+
+.text-sec {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+}
+
+.italic-text {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.italic-text-sec {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.btn-std {
+  width: 236px;
+  font-family: 'TT Travels';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(92.57deg, #13A6C7 0%, rgba(12, 103, 239, 0.7) 100%);
+  border-radius: 25px;
+  padding: 10px 25px;
+}
+
+.text-subsecound {
+  font-family: 'TT Travels';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cat {
+  position: absolute;
+  height: 510px;
+  object-position: 100% 0%;
+  background-position: 100% 0%;
+  margin: 0;
+  z-index: 99;
+}
+
+.main-cat {
+  height: 530px;
+  object-position: 100% 0%;
+  background-position: 100% 0%;
+  margin: 0;
+  filter: blur(50px);
+  opacity: 50%;
+}
