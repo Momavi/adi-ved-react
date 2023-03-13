@@ -1,23 +1,30 @@
-import {  Link } from "react-router-dom";
+// @ts-nocheck
+import { NavLink } from "react-router-dom";
 
-function NavLinks() {
+interface NavLinkProps {
+  to: string;
+  text: string;
+  exact?: boolean;
+}
+
+function NavLinks(): JSX.Element {
+  const links: NavLinkProps[] = [
+    { to: "/", text: "О нас" },
+    { to: "/price", text: "Услуги" },
+    { to: "/employees", text: "Сотрудники" },
+    { to: "/contact", text: "Контакты" },
+    { to: "/medcard", text: "МедКарта" },
+  ];
+
   return (
-    <ul className="nav-text ml-14 flex ">
-      <li className="ml-4">
-        <Link to="/">О нас</Link>
-      </li>
-      <li className="ml-4">
-        <Link to="/price">Услуги</Link>
-      </li>
-      <li className="ml-4">
-        <Link to="/employees">Сотрудники</Link>
-      </li>
-      <li className="ml-4">
-        <Link to="/contact">Контакты</Link>
-      </li>
-      <li className="ml-4">
-        <Link to="/medcard">МедКарта</Link>
-      </li>
+    <ul className="nav-text ml-14 flex">
+      {links.map(({ to, text }) => (
+        <li key={to} className="ml-4">
+          <NavLink exact="true" to={to} className='nav-link'>
+            {text}
+          </NavLink>
+        </li>
+      ))}
     </ul>
   );
 }
