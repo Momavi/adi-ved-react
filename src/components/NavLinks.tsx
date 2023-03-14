@@ -1,10 +1,8 @@
-// @ts-nocheck
 import { NavLink } from "react-router-dom";
 
 interface NavLinkProps {
   to: string;
   text: string;
-  exact?: boolean;
 }
 
 function NavLinks(): JSX.Element {
@@ -20,7 +18,7 @@ function NavLinks(): JSX.Element {
     <ul className="nav-text ml-14 flex">
       {links.map(({ to, text }) => (
         <li key={to} className="ml-4">
-          <NavLink exact="true" to={to} className='nav-link'>
+          <NavLink to={to} className='nav-link'>
             {text}
           </NavLink>
         </li>
