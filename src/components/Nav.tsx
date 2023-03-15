@@ -1,30 +1,48 @@
-import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useMedia } from "react-use";
 import { FaBars } from "react-icons/fa";
+import "./Nav.scss";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const isDesktop = useMedia("(min-width: 1026px)");
 
-  const toggleMenu = () => {
+  function showBurgerMenu() {
     setIsOpen(!isOpen);
-  };
+  }
 
   return (
-    <nav className="navigation flex items-center justify-between border-b-2 border-gray-700 pt-7 pb-3">
-      <div className="flex pl-4">
-        <Link to="/" className="logo-text">
-          “АДИ-ВЕД”
-        </Link>
-        <NavLinks />
-      </div>
+    <nav className="border-b-2 border-gray-700 pt-7 pb-3">
+      {isDesktop ? (
+        <span className="align-center flex  items-center justify-between">
+          <div className="flex">
+            <Link to="/" className="logo-text">
+              “АДИ-ВЕД”
+            </Link>
+            <NavLinks />
+          </div>
 
-      <div className="flex pr-4">
-        <p className="number-text mr-8">+7 (925) 802-95-54</p>
-        <button className="nav-btn">Записаться</button>
+          <div className="flex">
+            <p className="number-text md:mr-4 md:text-base xl:mr-8 xl:text-lg">
+              +7 (925) 802-95-54
+            </p>
 
-        <FaBars className="burger-icon" onClick={toggleMenu} />
-      </div>
+            <button className="nav-btn">Записаться</button>
+          </div>
+        </span>
+      ) : (
+        <span className="align-center mx-2 flex justify-between">
+          <Link to="/" className="logo-text">
+            “АДИ-ВЕД”
+          </Link>
+          <button className="nav-btn invisible sm:visible">
+            Записаться
+          </button>
+          <FaBars className="burger-icon" onClick={showBurgerMenu} />
+        </span>
+      )}
     </nav>
   );
 }

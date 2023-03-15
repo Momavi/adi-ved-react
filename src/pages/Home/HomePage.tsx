@@ -9,8 +9,10 @@ function HomePage() {
     <div>
       <div className="mt-32 mb-16 flex">
         <div className="w-1/2">
-          <div className="pr-8">
-            <p className="logo ml-12">“АДИ-ВЕД”</p>
+          <div className="relative pr-8">
+            <div className="relative w-fit">
+              <p className="logo ml-12">“АДИ-ВЕД”</p>
+            </div>
             <div className="logo-shadow"></div>
             <p className="text-sec mb-16 text-end text-4xl">
               Забота о <span className="italic-text">вашем</span> любимце
@@ -36,9 +38,8 @@ function HomePage() {
           </div>
         </div>
         <div className="w-1/2">
-          <div className="ml-48">
+          <div className="container-cat ml-48">
             <img className="cat" src={Cat} alt="Cat" />
-            <img className="main-cat" src={Cat} alt="Cat" />
           </div>
         </div>
       </div>

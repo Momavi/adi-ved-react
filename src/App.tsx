@@ -8,8 +8,8 @@ function App() {
     <Router>
       <div className="bg-image"></div>
       <div className="App dark:bg-dark dark:text-white">
-        <div className="container mx-auto">
-          <header className="App-header">
+        <div className="container mx-0 sm:mx-auto">
+          <header className="App-header md:mx-3 xl:mx-6">
             <Nav />
           </header>
           <PathsRouter />

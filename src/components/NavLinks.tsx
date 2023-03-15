@@ -15,10 +15,10 @@ function NavLinks(): JSX.Element {
   ];
 
   return (
-    <ul className="nav-text ml-14 flex">
+    <ul className="nav-text md:ml-2 xl:ml-14 flex">
       {links.map(({ to, text }) => (
-        <li key={to} className="ml-4">
-          <NavLink to={to} className='nav-link'>
+        <li key={to} className="md:ml-3 xl:ml-4">
+          <NavLink to={to} className="md:text-base xl:text-lg">
             {text}
           </NavLink>
         </li>
