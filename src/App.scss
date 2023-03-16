@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100%;
+  background: #16151bfa;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.navigation {
+  height: 100%;
+}
+
+// .bg-image {
+//   z-index: -1;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   background-image: url(./images/bg.png);
+//   background-size: cover;
+//   background-position: center;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: linear-gradient(0.85deg, #16151b00 -58.29%, #16151B 25.5%);
+//   }
+// }
+
+li {
+  list-style-type: none
+}
+
+@layer components {}

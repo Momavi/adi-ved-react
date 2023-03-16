@@ -1,22 +1,22 @@
-import {
-  HomePage,
-  ContactPage,
-  PricePage,
-  MedCardPage,
-  EmployeesPage,
-} from "./pages";
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-function PathsRouter() {
+const Home = lazy(() => import("./pages/Home/HomePage"));
+const Price = lazy(() => import("./pages/Price/PricePage"));
+const Employees = lazy(() => import("./pages/Employees/EmployeesPage"));
+const Contact = lazy(() => import("./pages/Contact/ContactPage"));
+const MedCard = lazy(() => import("./pages/MedCard/MedCardPage"));
+
+export function PathsRouter() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/price" element={<PricePage />} />
-      <Route path="/employees" element={<EmployeesPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/medcard" element={<MedCardPage />} />
-    </Routes>
+    <Suspense fallback={<div>Загрузка...</div>}>
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/price" Component={Price} />
+        <Route path="/employees" Component={Employees} />
+        <Route path="/contact" Component={Contact} />
+        <Route path="/medcard" Component={MedCard} />
+      </Routes>
+    </Suspense>
   );
 }
-
-export default PathsRouter;

@@ -2,7 +2,6 @@
   font-family: 'TT Travels';
   font-style: italic;
   font-weight: 800;
-  font-size: 64px;
   line-height: 77px;
   /* identical to box height */
 
@@ -53,7 +52,6 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
-  line-height: 100%;
 }
 
 .italic-text {
@@ -83,13 +81,11 @@
   font-family: 'Exo 2';
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
   line-height: 24px;
 }
 
 .container-cat {
   position: relative;
-  max-height: 600px;
 
   &::before {
     content: '';

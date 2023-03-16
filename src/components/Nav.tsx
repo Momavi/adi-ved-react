@@ -1,13 +1,13 @@
-import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useMedia } from "react-use";
 import { FaBars } from "react-icons/fa";
+import NavLinks from "./NavLinks";
 import "./Nav.scss";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const isDesktop = useMedia("(min-width: 1026px)");
+  const isDesktop = useMedia("(min-width: 1024px)");
 
   function showBurgerMenu() {
     setIsOpen(!isOpen);
@@ -16,7 +16,7 @@ function Nav() {
   return (
     <nav className="border-b-2 border-gray-700 pt-7 pb-3">
       {isDesktop ? (
-        <span className="align-center flex  items-center justify-between">
+        <span className="align-center flex items-center justify-between">
           <div className="flex">
             <Link to="/" className="logo-text">
               “АДИ-ВЕД”
@@ -37,9 +37,7 @@ function Nav() {
           <Link to="/" className="logo-text">
             “АДИ-ВЕД”
           </Link>
-          <button className="nav-btn invisible sm:visible">
-            Записаться
-          </button>
+          <button className="nav-btn invisible sm:visible">Записаться</button>
           <FaBars className="burger-icon" onClick={showBurgerMenu} />
         </span>
       )}
