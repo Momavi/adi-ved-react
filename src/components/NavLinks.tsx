@@ -18,7 +18,7 @@ function NavLinks(): JSX.Element {
     <ul className="nav-text md:ml-2 xl:ml-14 flex">
       {links.map(({ to, text }) => (
         <li key={to} className="md:ml-3 xl:ml-4">
-          <NavLink to={to} className="md:text-base xl:text-lg">
+          <NavLink to={to} className="md:text-base xl:text-lg text-base font-medium text-gray-300">
             {text}
           </NavLink>
         </li>

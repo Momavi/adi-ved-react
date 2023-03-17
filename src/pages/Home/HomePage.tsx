@@ -5,6 +5,10 @@ import Cat from "../../images/Cat.png";
 import "./home.scss";
 
 function HomePage() {
+  function methodDoesNotExist(): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="px-3 pb-9">
       <div className="mt-32 mb-16 flex">
@@ -18,14 +22,13 @@ function HomePage() {
             <p className="text-sec mb-16 text-end text-2xl lg:text-4xl">
               Забота о <span className="italic-text">вашем</span> любимце
             </p>
-            <p className="text-sec mb-16 indent-10 md:indent-20 preoldmb:text-xl sm:text-2xl md:text-start">
+            <p className="text-sec mb-16 indent-10 preoldmb:text-xl sm:text-2xl md:text-start md:indent-20">
               Наша команда состоит из
               <span className="italic-text-sec"> опытных ветеринаров </span>и
               медицинских сестер, которые обладают глубоким знанием и опытом в
-              области здоровья животных. Мы уделяем внимание
-              индивидуальным потребностям каждого питомца и его владельца, и
-              всегда готовы предоставить наилучшие рекомендации и советы по
-              уходу за животным.
+              области здоровья животных. Мы уделяем внимание индивидуальным
+              потребностям каждого питомца и его владельца, и всегда готовы
+              предоставить наилучшие рекомендации и советы по уходу за животным.
             </p>
           </div>
           <div className="flex flex-col items-center lg:items-end">
@@ -44,8 +47,8 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="text-subsecound flex flex-col justify-between text-sm sm:flex-row md:text-base">
-        <div className="mb-5 sm:mb-0 flex items-center">
+      <div className="text-subsecound flex flex-col items-center justify-between text-sm sm:flex-row md:text-base">
+        <div className="mb-5 flex items-center sm:mb-0">
           <img src={Place} alt="Place" className="mr-2" />
           <p>улица Дмитриевского, дом 1, этаж 1</p>
         </div>
