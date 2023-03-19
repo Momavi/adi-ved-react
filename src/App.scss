@@ -7,18 +7,18 @@ html {
   background: #16151bfa;
 }
 
-body {
-  height: 100%;
-  margin: 0;
-}
+// body {
+//   height: 100%;
+//   margin: 0;
+// }
 
 #root {
   height: 100%;
 }
 
-.App {
-  height: 100%;
-}
+// .App {
+//   height: 100%;
+// }
 
 .navigation {
   height: 100%;
@@ -48,4 +48,8 @@ li {
   list-style-type: none
 }
 
-@layer components {}
+@layer components {
+  .Montserrat{
+  font-family: 'Montserrat';
+  }
+}

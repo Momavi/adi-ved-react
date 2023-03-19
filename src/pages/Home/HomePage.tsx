@@ -5,15 +5,11 @@ import Cat from "../../images/Cat.png";
 import "./home.scss";
 
 function HomePage() {
-  function methodDoesNotExist(): void {
-    throw new Error("Function not implemented.");
-  }
-
   return (
     <div className="px-3 pb-9">
-      <div className="mt-32 mb-16 flex">
+      <div className="flex">
         <div className="w-full lg:w-1/2">
-          <div className="relative pr-8">
+          <div className="relative md:pr-8">
             <div className="relative w-fit">
               <p className="logo ml-12 text-4xl preoldmb:text-5xl lg:text-6xl">
                 “АДИ-ВЕД”
