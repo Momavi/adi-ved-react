@@ -1,12 +1,9 @@
-import Stars from "../../images/stars.svg";
-import Place from "../../images/place.svg";
-import Cloack from "../../images/cloack.svg";
-import Cat from "../../images/Cat.png";
+import { Stars, Place, Cloack, Cat } from "images/index";
 import "./home.scss";
 
 function HomePage() {
   return (
-    <div className="px-3 pb-9">
+    <div className="xl:mt-48 px-3 mt-36 pb-9 md:mt-48">
       <div className="flex">
         <div className="w-full lg:w-1/2">
           <div className="relative md:pr-8">

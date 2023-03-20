@@ -1,24 +1,17 @@
-import Phone from "../../images/phone.svg";
-import Email from "../../images/email.svg";
-import Place from "../../images/place.svg";
-import Ymap from "../../components/Ymap";
+import { Phone, Email, Place } from "images/index";
+import Ymap from "components/Ymap";
 import "./contact.scss";
-
-// const YmapStyle = {
-//   width: "1200px",
-//   height: "600px",
-// }
 
 function ContactPage() {
   return (
     <div>
-      <div className="mb-32 flex">
+      <div className="xl:mt-48 mb-32 mt-36 flex md:mt-48">
         <div className="Montserrat w-1/2 pr-16">
           <p className="mb-32 text-5xl">
-            Запись в одно{" "}
-            <span className="contact-gradient-text font-bold italic">
-              прикосновение
-            </span>
+            Запись в три
+            <p className="contact-gradient-text font-bold italic">
+              прикосновения
+            </p>
           </p>
           <div className="mb-16 flex flex-col">
             <input
@@ -37,10 +30,12 @@ function ContactPage() {
           </div>
         </div>
         <div className="w-1/2">
-          <Ymap />
+          <div className="contact-map h-full w-full">
+            <Ymap />
+          </div>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-around px-3">
         <div className="flex items-center">
           <img src={Phone} alt="Phone" className="mr-1 h-6" />
           <div>

@@ -15,7 +15,7 @@ function App() {
               <header className="md:mx-3 xl:mx-6">
                 <Nav />
               </header>
-              <div className="mt-36 mb-16 md:mt-48 xl:mt-48">
+              <div className="mb-16">
                 <PathsRouter />
               </div>
             </div>

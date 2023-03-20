@@ -4,8 +4,7 @@ import { useMedia } from "react-use";
 import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { NavLink } from "react-router-dom";
-import Place from "../images/place.svg";
-import Phone from "../images/phone.svg";
+import { Place, Phone } from "images/index";
 import NavLinks from "./NavLinks";
 import "./Nav.scss";
 
