@@ -11,7 +11,7 @@ function App() {
         <div className="App">
           <div className="bg-image"></div>
           <div className="dark:bg-dark dark:text-white">
-            <div className="mx-0 px-0 sm:container sm:mx-auto sm:px-6 sm:px-2">
+            <div className="oldmb:px-1 mx-0 px-0 sm:container sm:mx-auto sm:px-2">
               <header className="md:mx-3 xl:mx-6">
                 <Nav />
               </header>

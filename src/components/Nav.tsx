@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMedia } from "react-use";
 import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -10,19 +10,28 @@ import "./Nav.scss";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const isDesktop = useMedia("(min-width: 1024px)");
 
-  const styles = {
-    isOpen: "",
-  };
+  useEffect(() => {
+    function handleScroll() {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    }
 
-  if (isOpen) {
-    styles.isOpen = "burger-menu-color";
-  }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
-      className={`${styles.isOpen} fixed-nav border-b-2 border-gray-700 md:container`}
+      className={`
+       ${isOpen ? "burger-menu-color" : ""}
+       ${scrollPosition ? "Scrolled" : ""}
+       fixed-nav border-b-2 border-gray-700 md:container`}
     >
       {isDesktop ? (
         <span className="align-center flex h-16 items-start justify-between px-5 pt-6">
@@ -90,7 +99,7 @@ function Nav() {
                 </NavLink>
                 <NavLink
                   to="/price"
-                  className="block rounded-md px-3 py-2 text-lg text-lg font-medium text-gray-300"
+                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
                 >
                   Услуги
                 </NavLink>
@@ -118,14 +127,14 @@ function Nav() {
                   </button>
                   <NavLink
                     to="/medcard"
-                    className="block flex rounded-md px-3 py-2 text-base font-medium text-gray-300"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
                   >
                     <img src={Phone} alt="Phone" className="mr-1 h-6" />
                     +7 (925) 802-95-54
                   </NavLink>
                   <NavLink
                     to="/medcard"
-                    className="block flex rounded-md px-3 py-2 text-base font-medium text-gray-300"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
                   >
                     <img src={Place} alt="Place" className="mr-1" />
                     улица Дмитриевского, дом 1, этаж 1
