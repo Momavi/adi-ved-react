@@ -3,8 +3,6 @@
   font-style: italic;
   font-weight: 800;
   line-height: 77px;
-  /* identical to box height */
-
   text-transform: uppercase;
   color: #37DBFF;
   text-align: start;
@@ -35,17 +33,6 @@
     box-shadow: 0 0 40px 40px rgba(55, 219, 255, 0.15);
     z-index: -1;
   }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   left: 23%;
-  //   width: 370px;
-  //   height: 100px;
-  //   filter: blur(50px);
-  //   opacity: 100%;
-  //   background: rgba(55, 219, 255, 0.25);
-  // }
 }
 
 .text-sec {

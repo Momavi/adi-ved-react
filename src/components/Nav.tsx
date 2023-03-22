@@ -1,30 +1,37 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useMedia } from "react-use";
-import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { NavLink } from "react-router-dom";
-import { Place, Phone } from "images/index";
+import { PhoneSVG, SunSVG } from "images/index";
 import NavLinks from "./NavLinks";
+import NavLinksMobile from "./NavLinksMobile";
 import "./Nav.scss";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const isDesktop = useMedia("(min-width: 1024px)");
+  // const nav = useSelector((state: { nav: any }) => state.nav);
 
   useEffect(() => {
     function handleScroll() {
       const position = window.pageYOffset;
       setScrollPosition(position);
     }
-
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // function changeCurrentTheme() {
+  //   if (
+  //   ) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }
 
   return (
     <nav
@@ -41,12 +48,20 @@ function Nav() {
             </Link>
             <NavLinks />
           </div>
-
           <div className="flex">
-            <p className="flex w-44 md:mr-4 md:text-base xl:mr-8 xl:text-lg">
-              <img src={Phone} alt="Phone" className="mr-1 h-6" />
+            <p className="flex w-44 cursor-pointer md:mr-4 md:text-base xl:mr-8 xl:text-lg">
+              <span className="mr-2 h-6">
+                <PhoneSVG />
+              </span>
               <span className="number-text">+7 (925) 802-95-54</span>
             </p>
+
+            {/* <span
+              className="mr-4 cursor-pointer"
+              onClick={() => changeCurrentTheme()}
+            >
+              <SunSVG />
+            </span> */}
 
             <button className="nav-btn">Записаться</button>
           </div>
@@ -75,76 +90,7 @@ function Nav() {
           </div>
         </span>
       )}
-      {isOpen && (
-        <Transition
-          show={isOpen}
-          enter="transition duration-150 ease-out transform"
-          enterFrom="opacity-0 scale-95 translate-y-1"
-          enterTo="opacity-100 scale-100 translate-y-0"
-          leave="transition duration-150 ease-out transform"
-          leaveFrom="opacity-100 scale-100 translate-y-0"
-          leaveTo="opacity-0 scale-95 translate-y-1"
-        >
-          {() => (
-            <div
-              className="burger-menu-color fixed w-full lg:hidden"
-              id="mobile-menu"
-            >
-              <div className="flex flex-col items-center space-y-1 pt-4 pb-4 sm:px-1">
-                <NavLink
-                  to="/"
-                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
-                >
-                  О нас
-                </NavLink>
-                <NavLink
-                  to="/price"
-                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
-                >
-                  Услуги
-                </NavLink>
-                <NavLink
-                  to="/employees"
-                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
-                >
-                  Сотрудники
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
-                >
-                  Контакты
-                </NavLink>
-                <NavLink
-                  to="/medcard"
-                  className="block rounded-md px-3 py-2 text-lg font-medium text-gray-300"
-                >
-                  МедКарта
-                </NavLink>
-                <span className="flex flex-col items-center pt-24">
-                  <button className="nav-btn visible mb-12 sm:invisible">
-                    Записаться
-                  </button>
-                  <NavLink
-                    to="/medcard"
-                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
-                  >
-                    <img src={Phone} alt="Phone" className="mr-1 h-6" />
-                    +7 (925) 802-95-54
-                  </NavLink>
-                  <NavLink
-                    to="/medcard"
-                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
-                  >
-                    <img src={Place} alt="Place" className="mr-1" />
-                    улица Дмитриевского, дом 1, этаж 1
-                  </NavLink>
-                </span>
-              </div>
-            </div>
-          )}
-        </Transition>
-      )}
+      {isOpen ? <NavLinksMobile /> : null}
     </nav>
   );
 }

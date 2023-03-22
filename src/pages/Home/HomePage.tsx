@@ -1,9 +1,11 @@
-import { Stars, Place, Cloack, Cat } from "images/index";
+import { StarsSVG, PlaceSVG, CloackSVG, Cat } from "images/index";
+import { memo } from "react";
+
 import "./home.scss";
 
-function HomePage() {
+const HomePage = memo(() => {
   return (
-    <div className="xl:mt-48 px-3 mt-36 pb-9 md:mt-48">
+    <div className="mt-36 px-3 pb-9 md:mt-48 xl:mt-48">
       <div className="flex">
         <div className="w-full lg:w-1/2">
           <div className="relative md:pr-8">
@@ -26,9 +28,11 @@ function HomePage() {
           </div>
           <div className="flex flex-col items-center lg:items-end">
             <div className="flex flex-col items-center">
-              <button className="btn-std mb-3">Записаться</button>
-              <div className="flex items-center">
-                <img src={Stars} alt="Stars" className="mr-2" />
+              <button className="btn-std mb-3 text-white">Записаться</button>
+              <div className="mb-6 flex items-center lg:mb-24">
+                <span className="mr-2">
+                  <StarsSVG />
+                </span>
                 <p className="text-sec">100+ положительных отзывов</p>
               </div>
             </div>
@@ -42,12 +46,16 @@ function HomePage() {
       </div>
       <div className="text-subsecound flex flex-col items-center justify-between text-sm sm:flex-row md:text-base">
         <div className="mb-5 flex items-center sm:mb-0">
-          <img src={Place} alt="Place" className="mr-2" />
+          <span className="mr-2">
+            <PlaceSVG />
+          </span>
           <p>улица Дмитриевского, дом 1, этаж 1</p>
         </div>
 
         <div className="flex items-center">
-          <img src={Cloack} alt="Cloack" className="mr-2" />
+          <span className="mr-2">
+            <CloackSVG />
+          </span>
           <div className="flex flex-col items-end">
             <p>Время работы: Круглосуточно</p>
             <p>(Перерыв 10:00 - 11:00)</p>
@@ -56,6 +64,6 @@ function HomePage() {
       </div>
     </div>
   );
-}
+});
 
 export default HomePage;

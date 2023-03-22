@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 import App from "./App";
 
 Sentry.init({
@@ -12,6 +14,8 @@ Sentry.init({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );

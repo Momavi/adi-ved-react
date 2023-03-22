@@ -1,4 +1,9 @@
-import { ArrowDown, Bottle, Scissors, Syringe } from "images/index";
+import {
+  ArrowDownLeftSVG,
+  BottleSVG,
+  ScissorsSVG,
+  SyringeSVG,
+} from "images/index";
 import "./Price.scss";
 
 interface PriceItemProps {
@@ -8,7 +13,7 @@ interface PriceItemProps {
 
 function PriceItem({ title, price }: PriceItemProps) {
   return (
-    <div className="flex pb-2 items-center justify-between">
+    <div className="flex items-center justify-between pb-2">
       <p>{title}</p>
       <p>от {price}р</p>
     </div>
@@ -17,17 +22,17 @@ function PriceItem({ title, price }: PriceItemProps) {
 
 function PricePage() {
   return (
-    <div className="mt-36 px-16 flex justify-between md:mt-36 xl:mt-36">
-      <div className="w-1/3 mt">
+    <div className="mt-36 flex justify-between px-16 md:mt-36 xl:mt-36">
+      <div className="mt w-1/3">
         <div className="mb-16">
           <div className="mb-8 flex justify-between">
             <span className="flex">
-              <img src={ArrowDown} alt="ArrowDown" />
+              <ArrowDownLeftSVG />
               <span className="pt-1 pl-2">Анализы</span>
             </span>
-            <img src={Bottle} alt="Bottle" />
+            <BottleSVG />
           </div>
-          <div className="pl-8">
+          <div className="">
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />
@@ -40,12 +45,12 @@ function PricePage() {
         <div>
           <div className="mb-8 flex justify-between">
             <span className="flex">
-              <img src={ArrowDown} alt="ArrowDown" />
+              <ArrowDownLeftSVG />
               <span className="pt-1 pl-2">Груминг</span>
             </span>
-            <img src={Scissors} alt="Bottle" />
+            <ScissorsSVG />
           </div>
-          <div className="pl-8">
+          <div className="">
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />
@@ -60,12 +65,12 @@ function PricePage() {
         <div className="mb-16">
           <div className="mb-8 flex justify-between">
             <span className="flex">
-              <img src={ArrowDown} alt="ArrowDown" />
+              <ArrowDownLeftSVG />
               <span className="pt-1 pl-2">Процедуры</span>
             </span>
-            <img src={Syringe} alt="Bottle" />
+            <SyringeSVG />
           </div>
-          <div className="pl-8">
+          <div className="">
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />
