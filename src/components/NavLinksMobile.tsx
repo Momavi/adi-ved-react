@@ -35,7 +35,7 @@ function NavLinksMobile() {
             <NavLink
               key={link.to}
               to={link.to}
-              className="block rounded-sm px-3 pt-4 pb-0 text-lg font-medium text-gray-300"
+              className="block rounded-sm px-3 pt-4 pb-0 text-lg font-medium"
             >
               {link.text}
             </NavLink>
@@ -44,7 +44,7 @@ function NavLinksMobile() {
             <button className="nav-btn visible sm:invisible">Записаться</button>
             <NavLink
               to="/medcard"
-              className="nav-link flex rounded-md px-3 py-2 text-base font-medium text-gray-300"
+              className="nav-link flex rounded-md px-3 py-2 text-base font-medium"
             >
               <span className="mr-1 h-6">
                 <PhoneSVG />
@@ -53,7 +53,7 @@ function NavLinksMobile() {
             </NavLink>
             <NavLink
               to="/medcard"
-              className="nav-link flex rounded-md px-3 py-2 text-base font-medium text-gray-300"
+              className="nav-link flex rounded-md px-3 py-2 text-base font-medium"
             >
               <span className="mr-1">
                 <PlaceSVG />

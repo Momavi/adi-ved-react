@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+body {
+  background-color: var(--my-color);
+}
+
 svg {
   fill: currentColor
 }
@@ -42,5 +46,9 @@ li {
 @layer components {
   .Montserrat {
     font-family: 'Montserrat';
+  }
+
+  .text-corporative{
+    color: linear-gradient(92.57deg, #13A6C7 0%, rgba(12, 103, 239, 0.7) 100%);;
   }
 }

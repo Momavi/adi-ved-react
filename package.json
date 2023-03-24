@@ -23,7 +23,8 @@
     "react-router-dom": "^6.9.0",
     "react-use": "^17.4.0",
     "redux": "^4.2.1",
-    "sass": "^1.59.2"
+    "sass": "^1.59.2",
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

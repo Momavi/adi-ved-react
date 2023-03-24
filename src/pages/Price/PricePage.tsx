@@ -24,11 +24,11 @@ function PricePage() {
   return (
     <div className="mt-36 flex justify-between px-16 md:mt-36 xl:mt-36">
       <div className="mt w-1/3">
-        <div className="mb-16">
-          <div className="mb-8 flex justify-between">
-            <span className="flex">
+        <div className="mb-16 rounded-xl">
+          <div className="flex items-center justify-between bg-[url('images/price/bg-analizy.jpg')] px-6 pb-8">
+            <span className="flex items-end">
               <ArrowDownLeftSVG />
-              <span className="pt-1 pl-2">Анализы</span>
+              <span className="pb-2 pl-2 text-2xl font-bold">Анализы</span>
             </span>
             <BottleSVG />
           </div>
@@ -44,9 +44,9 @@ function PricePage() {
         </div>
         <div>
           <div className="mb-8 flex justify-between">
-            <span className="flex">
+            <span className="flex items-end">
               <ArrowDownLeftSVG />
-              <span className="pt-1 pl-2">Груминг</span>
+              <span className="pb-2 pl-2 text-2xl font-bold">Груминг</span>
             </span>
             <ScissorsSVG />
           </div>
@@ -64,9 +64,9 @@ function PricePage() {
       <div className="w-1/2">
         <div className="mb-16">
           <div className="mb-8 flex justify-between">
-            <span className="flex">
+            <span className="flex items-end">
               <ArrowDownLeftSVG />
-              <span className="pt-1 pl-2">Процедуры</span>
+              <span className="pb-2 pl-2 text-2xl font-bold">Процедуры</span>
             </span>
             <SyringeSVG />
           </div>

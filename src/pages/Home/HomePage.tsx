@@ -17,7 +17,7 @@ const HomePage = memo(() => {
             <p className="text-sec mb-16 text-end text-2xl lg:text-4xl">
               Забота о <span className="italic-text">вашем</span> любимце
             </p>
-            <p className="text-sec mb-16 indent-10 preoldmb:text-xl sm:text-2xl md:text-start md:indent-20">
+            <p className="text-sec mb-16 indent-10 preoldmb:text-xl sm:text-2xl md:text-start md:indent-20 break-all">
               Наша команда состоит из
               <span className="italic-text-sec"> опытных ветеринаров </span>и
               медицинских сестер, которые обладают глубоким знанием и опытом в
