@@ -24,15 +24,15 @@ function PricePage() {
   return (
     <div className="mt-36 flex justify-between px-16 md:mt-36 xl:mt-36">
       <div className="mt w-1/3">
-        <div className="mb-16 rounded-xl">
-          <div className="flex items-center justify-between bg-[url('images/price/bg-analizy.jpg')] px-6 pb-8">
+        <div className="text-white analizy-bg mb-16 rounded-xl px-6 py-4">
+          <div className="flex items-center justify-between pb-8 pt-[6px]">
             <span className="flex items-end">
               <ArrowDownLeftSVG />
               <span className="pb-2 pl-2 text-2xl font-bold">Анализы</span>
             </span>
             <BottleSVG />
           </div>
-          <div className="">
+          <div>
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />
@@ -43,14 +43,14 @@ function PricePage() {
           </div>
         </div>
         <div>
-          <div className="mb-8 flex justify-between">
+          <div className="flex items-center justify-between pb-8">
             <span className="flex items-end">
               <ArrowDownLeftSVG />
               <span className="pb-2 pl-2 text-2xl font-bold">Груминг</span>
             </span>
             <ScissorsSVG />
           </div>
-          <div className="">
+          <div>
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />
@@ -63,14 +63,14 @@ function PricePage() {
       </div>
       <div className="w-1/2">
         <div className="mb-16">
-          <div className="mb-8 flex justify-between">
+          <div className="flex items-center justify-between pb-8">
             <span className="flex items-end">
               <ArrowDownLeftSVG />
               <span className="pb-2 pl-2 text-2xl font-bold">Процедуры</span>
             </span>
             <SyringeSVG />
           </div>
-          <div className="">
+          <div>
             <PriceItem title="крови у кошек" price={1000} />
             <PriceItem title="крови у собак" price={1000} />
             <PriceItem title="биохимический анализ крови собаки" price={1500} />

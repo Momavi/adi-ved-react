@@ -15,7 +15,7 @@ function NavLinks(): JSX.Element {
   ];
 
   return (
-    <ul className="nav-text flex md:ml-2 xl:ml-14">
+    <ul className="nav-text flex items-end md:ml-2 xl:ml-14">
       {links.map(({ to, text }) => (
         <li key={to} className="h-full md:ml-3 xl:ml-4">
           <NavLink

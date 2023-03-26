@@ -1,0 +1,17 @@
+.analizy-bg {
+  background-image: url("images/price/2.svg");
+  background-position: -60px -100px;
+  position: relative;
+  // filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+
+  &-white {
+    background-image: url("images/price/3.svg");
+    background-position: -60px -100px;
+    position: relative;
+    // filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+  }
+}

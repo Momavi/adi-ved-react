@@ -1,6 +1,7 @@
 //PNG
 import Bg from "./Bg.png";
 import Cat from "./Cat.png";
+import SignUpPNG from "./signup.png";
 
 //SVG
 import CloackSVG from "./CloackSVG";
@@ -21,6 +22,7 @@ import SunSVG from "./nav/SunSVG";
 export {
   Cat,
   Bg,
+  SignUpPNG,
   CloackSVG,
   EmailSVG,
   PhoneSVG,

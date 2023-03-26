@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+  ],
   darkMode: "class",
   theme: {
     extend: {
-       backgroundImage: {
-        '1-price-bg': "url('/images/price/1.svg')",
+      backgroundImage: {
+        "1-price-bg": "url('/images/price/1.svg')",
       },
       screens: {
         oldmb: "320px",
@@ -22,7 +26,7 @@ module.exports = {
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: "light",
-    themes: ["light", "dark",]
+    darkTheme: "dark",
+    themes: ["light", "dark"],
   },
 };

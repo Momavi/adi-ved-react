@@ -5,7 +5,7 @@ import "./home.scss";
 
 const HomePage = memo(() => {
   return (
-    <div className="mt-36 px-3 pb-9 md:mt-48 xl:mt-48">
+    <div className="mt-36 px-3 pb-9 md:mt-36 xl:mt-44">
       <div className="flex">
         <div className="w-full lg:w-1/2">
           <div className="relative md:pr-8">
@@ -17,7 +17,7 @@ const HomePage = memo(() => {
             <p className="text-sec mb-16 text-end text-2xl lg:text-4xl">
               Забота о <span className="italic-text">вашем</span> любимце
             </p>
-            <p className="text-sec mb-16 indent-10 preoldmb:text-xl sm:text-2xl md:text-start md:indent-20 break-all">
+            <p className="text-sec mb-16 break-words indent-10 preoldmb:text-xl sm:text-2xl md:text-start md:indent-20">
               Наша команда состоит из
               <span className="italic-text-sec"> опытных ветеринаров </span>и
               медицинских сестер, которые обладают глубоким знанием и опытом в
@@ -28,7 +28,12 @@ const HomePage = memo(() => {
           </div>
           <div className="flex flex-col items-center lg:items-end">
             <div className="flex flex-col items-center">
-              <button className="btn-std mb-3 text-white">Записаться</button>
+              <label htmlFor="signup" className="btn-std btn text-white">
+                Записаться
+              </label>
+              {/* <button className="btn-std mb-3 text-white" for="sign up">
+                Записаться
+              </button> */}
               <div className="mb-6 flex items-center lg:mb-24">
                 <span className="mr-2">
                   <StarsSVG />

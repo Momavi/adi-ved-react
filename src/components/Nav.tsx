@@ -11,7 +11,6 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const isDesktop = useMedia("(min-width: 1024px)");
-  // const nav = useSelector((state: { nav: any }) => state.nav);
 
   useEffect(() => {
     function handleScroll() {
@@ -27,8 +26,10 @@ function Nav() {
   function changeCurrentTheme() {
     if (document.getElementsByClassName("dark").length) {
       document.documentElement.classList.remove("dark");
+      document.documentElement.dataset.theme = "light";
     } else {
       document.documentElement.classList.add("dark");
+      document.documentElement.dataset.theme = "dark";
     }
   }
 
@@ -37,7 +38,7 @@ function Nav() {
       className={`
        ${isOpen ? "burger-menu-color" : ""}
        ${scrollPosition ? "Scrolled" : ""}
-       fixed-nav border-b-2 border-gray-700 md:container`}
+       fixed-nav border-b-2 border-gray-700 xl:container`}
     >
       {isDesktop ? (
         <span className="align-center flex h-16 items-start justify-between px-5 pt-6">
@@ -48,7 +49,7 @@ function Nav() {
             <NavLinks />
           </div>
           <div className="flex h-full items-start">
-            <p className="flex h-full cursor-pointer items-start pt-1 md:mr-4 md:text-base xl:mr-8 xl:text-lg">
+            <p className="mr-2 flex h-full cursor-pointer items-start md:mr-3 md:text-base xl:mr-8 xl:text-lg">
               <span className="mr-2 h-full ">
                 <PhoneSVG />
               </span>
@@ -75,7 +76,13 @@ function Nav() {
               </svg>
             </label>
 
-            <button className="nav-btn h-8">Записаться</button>
+            {/* <button htmlFor="signup" className="nav-btn h-8">
+              Записаться
+            </button> */}
+
+            <label htmlFor="signup" className="nav-btn cursor-pointer h-8 text-white">
+              Записаться
+            </label>
           </div>
         </span>
       ) : (

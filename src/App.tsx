@@ -3,6 +3,20 @@ import { PathsRouter } from "./PathsRouter";
 import { YMaps } from "@pbe/react-yandex-maps";
 import Nav from "./components/Nav";
 import "./App.scss";
+import SignUp from "./components/SignUp";
+
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  // Пользователь использует темную тему
+  document.documentElement.classList.add("dark");
+  document.documentElement.dataset.theme = "dark";
+} else {
+  // Пользователь использует светлую тему
+  document.documentElement.classList.remove("dark");
+  document.documentElement.dataset.theme = "light";
+}
 
 function App() {
   return (
@@ -18,6 +32,7 @@ function App() {
               <div className="mb-16">
                 <PathsRouter />
               </div>
+              <SignUp />
             </div>
           </div>
         </div>
