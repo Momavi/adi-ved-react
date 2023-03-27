@@ -35,13 +35,13 @@ function Nav() {
 
   return (
     <nav
-      className={`
-       ${isOpen ? "burger-menu-color" : ""}
-       ${scrollPosition ? "Scrolled" : ""}
-       fixed-nav border-b-2 border-gray-700 xl:container`}
+      className={`${isOpen ? "burger-menu-color" : ""} ${
+        scrollPosition ? "Scrolled" : ""
+      }
+       fixed-nav border-b-2 border-gray-500 xl:container dark:border-gray-700`}
     >
       {isDesktop ? (
-        <span className="align-center flex h-16 items-start justify-between px-5 pt-6">
+        <span className="nav-bg-dark dark:nav-bg-dark align-center flex h-16 items-start justify-between px-5 pt-6">
           <div className="flex h-full">
             <Link to="/" className="logo-text">
               “АДИ-ВЕД”
@@ -80,7 +80,10 @@ function Nav() {
               Записаться
             </button> */}
 
-            <label htmlFor="signup" className="nav-btn cursor-pointer h-8 text-white">
+            <label
+              htmlFor="signup"
+              className="nav-btn h-8 cursor-pointer text-white"
+            >
               Записаться
             </label>
           </div>

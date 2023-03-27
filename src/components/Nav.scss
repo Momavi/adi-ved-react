@@ -18,6 +18,11 @@
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 999;
+    background: #fff;
+  }
+
+  .dark .fixed-nav {
+    background: #16151bfa;
   }
 
   .burger-menu-color {
@@ -54,10 +59,18 @@
   }
 
   a.active {
-    border-bottom: 3px #37DBFF solid;
+    border-bottom: 4px #37DBFF solid;
   }
 
   .burger-icon {
     width: 26px;
     height: 26px;
   }
+
+  // .nav-bg-dark {
+  //   background-color: rgba(22, 21, 27, 0.9803921569) !important;
+  // }
+
+  // .nav-bg-white {
+  //   background-color: rgba(255, 255, 255);
+  // }

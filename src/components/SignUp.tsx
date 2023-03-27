@@ -1,21 +1,7 @@
 import { SignUpPNG } from "@/images";
-import { SetStateAction, useState } from "react";
-import Datepicker from "react-tailwindcss-datepicker";
 import "./SignUp.scss";
 
 function SignUp() {
-  const [value, setValue] = useState({
-    startDate: new Date(),
-    endDate: new Date().setMonth(11),
-  });
-
-  const handleValueChange = (
-    newValue: SetStateAction<{ startDate: Date; endDate: number }>
-  ) => {
-    console.log("newValue:", newValue);
-    setValue(newValue);
-  };
-
   return (
     <span>
       <input type="checkbox" id="signup" className="modal-toggle" />
@@ -28,17 +14,17 @@ function SignUp() {
             ✕
           </label>
           <div className="flex flex-col items-center">
-            <img src={SignUpPNG} alt="" />
-            <h3 className="text-lg font-bold">Запись на прием</h3>
+            {/* <img src={SignUpPNG} alt="" /> */}
+            <h3 className="font-bold text-4xl mb-12">Запись на прием</h3>
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Выберите врача</span>
               </label>
-              <select className="select-bordered select">
+              <select defaultValue="option1" className="select-bordered select">
                 <option disabled selected>
                   Врач
                 </option>
-                <option>Star Wars</option>
+                <option value="option1">Star Wars</option>
                 <option>Harry Potter</option>
                 <option>Lord of the Rings</option>
                 <option>Planet of the Apes</option>
@@ -50,11 +36,11 @@ function SignUp() {
               <label className="label">
                 <span className="label-text">Выберите время</span>
               </label>
-              <select className="select-bordered select">
+              <select defaultValue="option1" className="select-bordered select">
                 <option disabled selected>
                   Время
                 </option>
-                <option>Star Wars</option>
+                <option value="option1">Star Wars</option>
                 <option>Harry Potter</option>
                 <option>Lord of the Rings</option>
                 <option>Planet of the Apes</option>
@@ -66,11 +52,11 @@ function SignUp() {
               <label className="label">
                 <span className="label-text">Выберите услугу</span>
               </label>
-              <select className="select-bordered select">
+              <select defaultValue="option1" className="select-bordered select">
                 <option disabled selected>
                   Услуга
                 </option>
-                <option>Star Wars</option>
+                <option value="option1">Star Wars</option>
                 <option>Harry Potter</option>
                 <option>Lord of the Rings</option>
                 <option>Planet of the Apes</option>
@@ -78,7 +64,7 @@ function SignUp() {
               </select>
             </div>
 
-            <button className="btn-accent btn mt-8">записаться</button>
+            <button className="signup-btn btn mt-16">записаться</button>
           </div>
         </label>
       </label>

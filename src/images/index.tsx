@@ -15,6 +15,7 @@ import ArrowDownLeftSVG from "./price/ArrowDownLeftSVG";
 import BottleSVG from "./price/BottleSVG";
 import ScissorsSVG from "./price/ScissorsSVG";
 import SyringeSVG from "./price/SyringeSVG";
+import SurgicalSVG from "./price/SurgicalSVG"
 
 // NAV
 import SunSVG from "./nav/SunSVG";
@@ -32,5 +33,6 @@ export {
   BottleSVG,
   ScissorsSVG,
   SyringeSVG,
+  SurgicalSVG,
   SunSVG,
 };
