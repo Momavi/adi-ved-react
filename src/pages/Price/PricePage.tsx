@@ -13,9 +13,9 @@ interface PriceItemProps {
 
 function PriceItem({ title, price }: PriceItemProps) {
   return (
-    <div className="flex items-center justify-between pb-2">
-      <p>{title}</p>
-      <p>от {price}р</p>
+    <div className="flex items-center justify-between border-b border-gray-800 py-2">
+      <p className="">{title}</p>
+      <p className="">от {price}р</p>
     </div>
   );
 }
@@ -24,8 +24,8 @@ function PricePage() {
   return (
     <div className="mt-36 flex justify-between px-16 md:mt-36 xl:mt-36">
       <div className="mt w-1/3">
-        <div className="text-white analizy-bg mb-16 rounded-xl px-6 py-4">
-          <div className="flex items-center justify-between pb-8 pt-[6px]">
+        <div className="mb-16 rounded-xl px-6 pb-4">
+          <div className="flex items-center justify-between px-2 pb-8 pt-[6px]">
             <span className="flex items-end">
               <ArrowDownLeftSVG />
               <span className="pb-2 pl-2 text-2xl font-bold">Анализы</span>
