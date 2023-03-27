@@ -15,7 +15,9 @@ function SignUp() {
           </label>
           <div className="flex flex-col items-center">
             {/* <img src={SignUpPNG} alt="" /> */}
-            <h3 className="font-bold text-4xl mb-12">Запись на прием</h3>
+            <h3 className="mb-12 text-3xl font-bold xl:text-4xl">
+              Запись на прием
+            </h3>
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Выберите врача</span>

@@ -41,7 +41,7 @@ function Nav() {
        fixed-nav border-b-2 border-gray-500 xl:container dark:border-gray-700`}
     >
       {isDesktop ? (
-        <span className="nav-bg-dark dark:nav-bg-dark align-center flex h-16 items-start justify-between px-5 pt-6">
+        <span className="nav-bg-dark dark:nav-bg-dark align-center flex h-16 items-start justify-between px-2 xl:px-5 pt-6">
           <div className="flex h-full">
             <Link to="/" className="logo-text">
               “АДИ-ВЕД”
