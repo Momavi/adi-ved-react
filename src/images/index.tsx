@@ -2,6 +2,10 @@
 import Bg from "./Bg.png";
 import Cat from "./Cat.png";
 import SignUpPNG from "./signup.png";
+import CouchPNG from "./price/couch.png";
+import SyringePNG from "./price/syringe.png";
+import TestTubePNG from "./price/test_tube.png";
+import TrimmerPNG from "./price/trimmer.png";
 
 //SVG
 import CloackSVG from "./CloackSVG";
@@ -24,6 +28,10 @@ export {
   Cat,
   Bg,
   SignUpPNG,
+  CouchPNG,
+  SyringePNG,
+  TestTubePNG,
+  TrimmerPNG,
   CloackSVG,
   EmailSVG,
   PhoneSVG,

@@ -29,7 +29,7 @@ function App() {
               <header className="md:mx-3 xl:mx-6">
                 <Nav />
               </header>
-              <div className="mb-16">
+              <div className="mb-5">
                 <PathsRouter />
               </div>
               <SignUp />
