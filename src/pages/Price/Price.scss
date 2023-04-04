@@ -1,55 +1,9 @@
-.dark .analizy-bg {
-  background-image: url("images/price/2.svg");
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.analizy-bg {
-  background-image: url("images/price/3.svg");
-  background-position: -60px -100px;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-}
-
-.dark .gruming-bg {
-  background-image: url("images/price/procedure-bg.png");
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.gruming-bg {
-  background-image: url("images/price/procedure-bg.png");
-  background-position: -60px -100px;
-  color: white;
-}
-
-.dark .procedure-bg {
-  background-image: url("images/price/Spiral-Chaos.png");
-  background-position: 10px -40px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-}
-
-.procedure-bg {
-  background-image: url("images/price/Spiral-Chaos.png");
-  background-position: 10px -40px;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-}
-
-.dark .syringe-bg {
-  background-image: url("images/price/Wiggle.png");
-  background-position: -60px -100px;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-}
-
-.syringe-bg {
-  background-image: url("images/price/Wiggle.png");
-  background-position: -60px -100px;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-}
-
-.price-bg {
-  position: relative;
-  background-blend-mode: overlay;
+.price-img{
+  position: absolute;
+  width: 250px;
+  right: -40px;
+  bottom: -40px;
+  &-mobile{
+    width: 200px;
+  }
 }

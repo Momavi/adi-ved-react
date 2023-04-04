@@ -40,6 +40,11 @@
     color: white;
     border-radius: 25px;
     padding: 7px 15px;
+    transition: all 0.3s;
+
+    &:hover {
+      background: linear-gradient(92.57deg, #13a6c7e7 0%, rgba(12, 103, 239, 0.671) 100%);
+    }
   }
 
   .logo-text {

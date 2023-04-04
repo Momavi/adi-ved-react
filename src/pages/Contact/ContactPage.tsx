@@ -14,7 +14,7 @@ function ContactPage() {
             </p>
           </div>
 
-          <div className="item-center flex flex-col md:mb-16  lg:items-start">
+          <div className="item-center flex flex-col md:mb-16 lg:items-start  xl:w-4/6">
             <input
               type="text"
               placeholder="Ваше имя"
