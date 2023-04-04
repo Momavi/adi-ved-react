@@ -6,7 +6,7 @@ function ContactPage() {
   return (
     <div>
       <div className="mx-1 mb-8 mt-32 md:mt-36 lg:mb-24 lg:flex xl:mt-48">
-        <div className="Montserrat lg:w-1/2 lg:pr-16">
+        <div className="Montserrat w-full lg:w-5/6 lg:pr-16 lg:pl-16">
           <div className="mb-8 text-4xl font-medium preoldmb:mb-16 preoldmb:text-5xl lg:mb-32">
             <p>Запись в три</p>
             <p className="contact-gradient-text font-bold italic">
@@ -14,18 +14,18 @@ function ContactPage() {
             </p>
           </div>
 
-          <div className="item-center flex flex-col md:mb-16 lg:items-start">
+          <div className="item-center flex flex-col md:mb-16  lg:items-start">
             <input
               type="text"
               placeholder="Ваше имя"
-              className="contact-input mb-8 bg-transparent px-2 py-2 lg:w-3/4"
+              className="contact-input mb-8 w-full bg-transparent px-2 py-2"
             />
             <input
               type="text"
               placeholder="Ваш телефон"
-              className="contact-input mb-8 bg-transparent px-2 py-2 lg:w-3/4"
+              className="contact-input mb-8 w-full bg-transparent px-2 py-2"
             />
-            <div className="mb-12 flex flex-col items-center lg:mb-0 lg:w-3/4">
+            <div className="mb-12 flex w-full flex-col items-center lg:mb-0">
               <button className="contact-btn visible text-white">
                 мы вам позвоним
               </button>
