@@ -1,7 +1,13 @@
-import { SignUpPNG } from "@/images";
+import { useState } from "react";
 import "./SignUp.scss";
 
 function SignUp() {
+  const [selectedOption, setSelectedOption] = useState("option1");
+
+  const handleChange = (event: { target: { value: string; }; }) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
     <span>
       <input type="checkbox" id="signup" className="modal-toggle" />
@@ -14,7 +20,6 @@ function SignUp() {
             ✕
           </label>
           <div className="flex flex-col items-center">
-            {/* <img src={SignUpPNG} alt="" /> */}
             <h3 className="mb-12 text-3xl font-bold xl:text-4xl">
               Запись на прием
             </h3>
@@ -22,15 +27,18 @@ function SignUp() {
               <label className="label">
                 <span className="label-text">Выберите врача</span>
               </label>
-              <select defaultValue="option1" className="select-bordered select">
+              <select
+                value={selectedOption}
+                onChange={handleChange}
+                className="select-bordered select"
+              >
                 <option disabled selected>
                   Врач
                 </option>
-                <option value="option1">Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option value="option1">Наталья Викторовна Овчинникова</option>
+                <option>Елена Николаевна Вертушкина</option>
+                <option>Татьяна Александровна Юшина</option>
+                <option>Максим Алексеевич Спирин</option>
               </select>
             </div>
 
@@ -38,15 +46,15 @@ function SignUp() {
               <label className="label">
                 <span className="label-text">Выберите время</span>
               </label>
-              <select defaultValue="option1" className="select-bordered select">
+              <select
+                value={selectedOption}
+                onChange={handleChange}
+                className="select-bordered select"
+              >
                 <option disabled selected>
                   Время
                 </option>
-                <option value="option1">Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option value="option1">01.01.1971</option>
               </select>
             </div>
 
@@ -54,15 +62,15 @@ function SignUp() {
               <label className="label">
                 <span className="label-text">Выберите услугу</span>
               </label>
-              <select defaultValue="option1" className="select-bordered select">
+              <select
+                value={selectedOption}
+                onChange={handleChange}
+                className="select-bordered select"
+              >
                 <option disabled selected>
                   Услуга
                 </option>
-                <option value="option1">Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option value="option1">Кастрация</option>
               </select>
             </div>
 

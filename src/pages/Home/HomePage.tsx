@@ -28,13 +28,10 @@ const HomePage = memo(() => {
           </div>
           <div className="flex flex-col items-center lg:items-end">
             <div className="flex flex-col items-center">
-              <label htmlFor="signup" className="btn-std btn text-white">
+              <label htmlFor="signup" className="btn-std btn text-white mb-3">
                 Записаться
               </label>
-              {/* <button className="btn-std mb-3 text-white" for="sign up">
-                Записаться
-              </button> */}
-              <div className="mb-6 flex items-center lg:mb-24">
+              <div className="flex items-center">
                 <span className="mr-2">
                   <StarsSVG />
                 </span>
@@ -49,7 +46,7 @@ const HomePage = memo(() => {
           </div>
         </div>
       </div>
-      <div className="text-subsecound flex flex-col items-center justify-between text-sm sm:flex-row md:text-base">
+      <div className="mt-8 text-subsecound flex flex-col items-center justify-between text-sm sm:flex-row md:text-base">
         <div className="mb-5 flex items-center sm:mb-0">
           <span className="mr-2">
             <PlaceSVG />
