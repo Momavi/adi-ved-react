@@ -25,6 +25,7 @@
     "react-use": "^17.4.0",
     "redux": "^4.2.1",
     "sass": "^1.59.2",
+    "swiper": "^9.2.0",
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
