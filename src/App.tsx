@@ -19,13 +19,26 @@ if (
 }
 
 function App() {
+  function consoleLocation() {
+    console.log(location.pathname);
+  }
+
+  function handleClick() {
+    consoleLocation();
+  }
+
   return (
     <Router>
       <YMaps>
-        <div className="App">
-          {/* <div className="bg-image"></div> */}
+        <div className="App" onClick={handleClick}>
           <div className="text-black transition-colors duration-1000 dark:text-white">
-            <div className="mx-0 px-0 sm:container oldmb:px-1 sm:mx-auto sm:px-2">
+            <div
+              className={`mx-0 px-0 ${
+                location.pathname === "/employees"
+                  ? ""
+                  : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
+              }`}
+            >
               <header className="md:mx-3 xl:mx-6">
                 <Nav />
               </header>
