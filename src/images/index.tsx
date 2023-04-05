@@ -21,6 +21,12 @@ import ScissorsSVG from "./price/ScissorsSVG";
 import SyringeSVG from "./price/SyringeSVG";
 import SurgicalSVG from "./price/SurgicalSVG"
 
+// EMPLOYEES
+import Person1 from "./Employees/1.png";
+import Person2 from "./Employees/2.png";
+import Person3 from "./Employees/3.png";
+import Person4 from "./Employees/4.png";
+
 // NAV
 import SunSVG from "./nav/SunSVG";
 
@@ -43,4 +49,8 @@ export {
   SyringeSVG,
   SurgicalSVG,
   SunSVG,
+  Person1,
+  Person2,
+  Person3,
+  Person4,
 };
