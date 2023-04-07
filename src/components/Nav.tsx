@@ -53,7 +53,9 @@ function Nav() {
               <span className="mr-2 h-full ">
                 <PhoneSVG />
               </span>
-              <span className="number-text h-full">+7 (925) 802-95-54</span>
+              <a href="tel: 7 (925) 802-95-54" className="number-text h-full">
+                +7 (925) 802-95-54
+              </a>
             </p>
 
             <label className="swap-rotate swap mr-5">

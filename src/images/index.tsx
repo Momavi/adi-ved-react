@@ -1,5 +1,4 @@
 //PNG
-import Bg from "./Bg.png";
 import Cat from "./Cat.png";
 import SignUpPNG from "./signup.png";
 import CouchPNG from "./price/couch.png";
@@ -32,7 +31,6 @@ import SunSVG from "./nav/SunSVG";
 
 export {
   Cat,
-  Bg,
   SignUpPNG,
   CouchPNG,
   SyringePNG,

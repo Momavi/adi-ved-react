@@ -1,6 +1,8 @@
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import { Person1, Person2, Person3, Person4 } from "@/images";
+import { SwiperNavButton } from "@/components/SwiperNavButton";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -9,8 +11,7 @@ import "swiper/scss/effect-coverflow";
 import "./Employess.scss";
 
 function EmployeesPage() {
-  const swiper = useSwiper();
-
+  const [currentEmployees, setCurrentEmployees] = useState(0);
   return (
     <>
       <Swiper
@@ -50,10 +51,9 @@ function EmployeesPage() {
             spaceBetween: -600,
           },
         }}
-        // onSlideChange={() => console.log("slide change")}
-        navigation
+        onSlideChange={(swiper) => setCurrentEmployees(swiper.realIndex)}
         modules={[Navigation, EffectCoverflow]}
-        className="mySwiper"
+        className="mySwiper relative"
       >
         <SwiperSlide>
           <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
@@ -257,15 +257,9 @@ function EmployeesPage() {
             </div>
           </div>
         </SwiperSlide>
-        {/* <span
-          onClick={() => {
-            console.log(swiper);
-          }}
-          className="swiper-button-next"
-        >
-          dsdsdsds
-        </span> */}
+        <SwiperNavButton />
       </Swiper>
+      <div className="container"></div>
     </>
   );
 }
