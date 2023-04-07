@@ -1,0 +1,17 @@
+.swiper-nav-btn {
+  position: absolute;
+  z-index: 999;
+  bottom: 0px;
+  left: 50%;
+}
+
+
+.swiper-btn-prev-self {
+  top: -40px !important;
+  left: -120px !important;
+}
+
+.swiper-btn-next-self {
+  top: -40px !important;
+  left: 100px !important;
+}
