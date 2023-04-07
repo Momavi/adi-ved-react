@@ -1,9 +1,10 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { PathsRouter } from "./PathsRouter";
-import { YMaps } from "@pbe/react-yandex-maps";
 import Nav from "./components/Nav";
-import "./App.scss";
 import SignUp from "./components/SignUp";
+
+import "./App.scss";
 
 if (
   window.matchMedia &&
@@ -19,26 +20,23 @@ if (
 }
 
 function App() {
-  function consoleLocation() {
-    console.log(location.pathname);
-  }
+  const location = useLocation();
+  const [className, setClassName] = useState("");
 
-  function handleClick() {
-    consoleLocation();
-  }
+  useEffect(() => {
+    setClassName(
+      `mx-0 px-0 ${
+        location.pathname === "/employees"
+          ? ""
+          : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
+      }`
+    );
+  }, [location.pathname]);
 
   return (
-    <Router>
-      <YMaps>
-        <div className="App" onClick={handleClick}>
+        <div className="App">
           <div className="text-black transition-colors duration-1000 dark:text-white">
-            <div
-              className={`mx-0 px-0 ${
-                location.pathname === "/employees"
-                  ? ""
-                  : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
-              }`}
-            >
+            <div className={className}>
               <header className="md:mx-3 xl:mx-6">
                 <Nav />
               </header>
@@ -49,8 +47,6 @@ function App() {
             </div>
           </div>
         </div>
-      </YMaps>
-    </Router>
   );
 }
 
