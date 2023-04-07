@@ -4,7 +4,7 @@ import "./contact.scss";
 
 function ContactPage() {
   return (
-    <div>
+    <div className="sm:container">
       <div className="mx-1 mb-8 mt-32 md:mt-36 lg:mb-24 lg:flex xl:mt-48">
         <div className="Montserrat w-full lg:w-5/6 lg:pr-16 lg:pl-16">
           <div className="mb-8 text-4xl font-medium preoldmb:mb-16 preoldmb:text-5xl lg:mb-32">
