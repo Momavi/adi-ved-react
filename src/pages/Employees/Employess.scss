@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .swiper-slide.swiper-slide-visible{
@@ -48,4 +48,9 @@
   border-radius: 4px;
   margin: 0 10px;
   font-size: 13px;
+}
+
+.employeess-btn{
+  background: linear-gradient(92.57deg, #13A6C7 0%, rgba(12, 103, 239, 0.7) 100%);
+  border: 0px transparent;
 }

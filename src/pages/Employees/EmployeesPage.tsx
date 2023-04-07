@@ -1,18 +1,22 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import { Person1, Person2, Person3, Person4 } from "@/images";
 
-import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/effect-coverflow";
 
 import "./Employess.scss";
 
 function EmployeesPage() {
+  const swiper = useSwiper();
+
   return (
     <>
       <Swiper
         effect={"coverflow"}
-        centeredSlides={true}
+        loop
+        centeredSlides
         coverflowEffect={{
           rotate: 25,
           stretch: 50,
@@ -26,7 +30,7 @@ function EmployeesPage() {
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           1024: {
@@ -34,85 +38,233 @@ function EmployeesPage() {
             spaceBetween: 30,
           },
           1280: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           1366: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: -300,
           },
           1536: {
-            slidesPerView: 3,
-            spaceBetween: 50,
+            slidesPerView: 2,
+            spaceBetween: -600,
           },
         }}
-        grabCursor={true}
-        navigation={true}
+        // onSlideChange={() => console.log("slide change")}
+        navigation
         modules={[Navigation, EffectCoverflow]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="card w-96 bg-base-100 drop-shadow-2xl ">
-            <figure>
-              <img src={Person1} alt="Person1" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Наталья Викторовна Овчинникова</h2>
-              <p>Ветеринар, врач-терапевт, ветеринарный невролог</p>
-              <p>Стаж - 31 года</p>
-              <div className="card-actions mt-4 justify-center">
-                <button className="btn-primary btn">Записаться</button>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card w-96 bg-base-100 drop-shadow-2xl">
+          <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
             <figure>
               <img src={Person2} alt="Person2" />
             </figure>
-            <div className="card-body">
+            <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+              <div className="rating rating-lg absolute -top-4 ">
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  checked
+                  readOnly
+                />
+              </div>
               <h2 className="card-title justify-center">
                 Максим Алексеевич Спирин
               </h2>
               <p>Ветеринар, ветеринарный ортопед, ветеринарный хирург</p>
               <p>Стаж - 28 лет</p>
               <div className="card-actions mt-4 justify-center">
-                <button className="btn-primary btn">Записаться</button>
+                <button className="employeess-btn btn-primary btn-wide btn">
+                  Записаться
+                </button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card w-96 bg-base-100 drop-shadow-2xl">
+          <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
+            <figure>
+              <img src={Person1} alt="Person1" />
+            </figure>
+            <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+              <div className="rating rating-lg absolute -top-4 ">
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  checked
+                  readOnly
+                />
+              </div>
+              <h2 className="card-title">Наталья Викторовна Овчинникова</h2>
+              <p>Ветеринар, врач-терапевт, ветеринарный невролог</p>
+              <p>Стаж - 31 года</p>
+              <div className="card-actions mt-4 justify-center">
+                <button className="employeess-btn btn-primary btn-wide btn">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
             <figure>
               <img src={Person3} alt="Person3" />
             </figure>
-            <div className="card-body">
+            <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+              <div className="rating rating-lg absolute -top-4 ">
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  checked
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+              </div>
               <h2 className="card-title">Елена Николаевна Вертушкина</h2>
               <p>Ветеринар, ветеринарный хирург</p>
               <p>Стаж - 23 года</p>
               <div className="card-actions mt-4 justify-center">
-                <button className="btn-primary btn">Записаться</button>
+                <button className="employeess-btn btn-primary btn-wide btn">
+                  Записаться
+                </button>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card w-96 bg-base-100 drop-shadow-2xl">
+          <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
             <figure>
               <img src={Person4} alt="Person4" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title">Елена Николаевна Вертушкина</h2>
+            <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+              <div className="rating rating-lg absolute -top-4 ">
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  checked
+                  readOnly
+                />
+                <input
+                  type="radio"
+                  name="rating-8"
+                  className="mask mask-star-2 bg-orange-400"
+                  readOnly
+                />
+              </div>
+              <h2 className="card-title">Татьяна Александровна Юшина</h2>
               <p>Ветеринар, ветеринарный хирург</p>
               <p>Стаж - 23 года</p>
               <div className="card-actions mt-4 justify-center">
-                <button className="btn-primary btn">Записаться</button>
+                <button className="employeess-btn btn-primary btn-wide btn">
+                  Записаться
+                </button>
               </div>
             </div>
           </div>
         </SwiperSlide>
+        {/* <span
+          onClick={() => {
+            console.log(swiper);
+          }}
+          className="swiper-button-next"
+        >
+          dsdsdsds
+        </span> */}
       </Swiper>
     </>
   );
