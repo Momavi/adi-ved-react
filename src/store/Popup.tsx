@@ -24,5 +24,4 @@ export const { actions, reducer } = createSlice({
 });
 
 export const { showSign, showPriceTable } = actions;
-
 export default reducer;

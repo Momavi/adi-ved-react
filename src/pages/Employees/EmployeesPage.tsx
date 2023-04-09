@@ -108,7 +108,7 @@ function EmployeesPage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card w-96 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
+          <div className="card w-96 h-5/6 border-2 border-neutral-200 bg-base-300 drop-shadow-2xl dark:border-neutral-800">
             <figure>
               <img src={Person1} alt="Person1" />
             </figure>
