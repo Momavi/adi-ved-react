@@ -9,7 +9,7 @@ const MedCard = lazy(() => import("./pages/MedCard/MedCardPage"));
 
 export function PathsRouter() {
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
+    <Suspense fallback={<div></div>}>
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/price" Component={Price} />

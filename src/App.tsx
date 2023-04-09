@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { PathsRouter } from "./PathsRouter";
 import Nav from "./components/Nav";
 import SignUp from "./components/SignUp";
-
+import PriceTable from "./components/Popup/PriceTable";
 import "./App.scss";
 
 if (
@@ -23,30 +24,41 @@ function App() {
   const location = useLocation();
   const [className, setClassName] = useState("");
 
+  const sign = useSelector(
+    (state: { popup: { sign: boolean } }) => state.popup.sign
+  );
+
+  const priceTable = useSelector(
+    (state: { popup: { priceTable: boolean } }) => state.popup.priceTable
+  );
+
   useEffect(() => {
-    setClassName(
-      `mx-0 px-0 ${
-        location.pathname === "/employees"
-          ? ""
-          : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
-      }`
-    );
+    startTransition(() => {
+      setClassName(
+        `mx-0 px-0 ${
+          location.pathname === "/employees"
+            ? ""
+            : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
+        }`
+      );
+    });
   }, [location.pathname]);
 
   return (
-        <div className="App">
-          <div className="text-black transition-colors duration-1000 dark:text-white">
-            <div className={className}>
-              <header className="md:mx-3 xl:mx-6">
-                <Nav />
-              </header>
-              <div className="mb-5">
-                <PathsRouter />
-              </div>
-              <SignUp />
-            </div>
+    <div className="App">
+      <div className="text-black transition-colors duration-1000 dark:text-white">
+        <div className={className}>
+          <header className="md:mx-3 xl:mx-6">
+            <Nav />
+          </header>
+          <div className="mb-5">
+            <PathsRouter />
           </div>
+          {sign ? <SignUp /> : null}
+          {priceTable ? <PriceTable /> : null}
         </div>
+      </div>
+    </div>
   );
 }
 

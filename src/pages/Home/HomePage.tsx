@@ -3,7 +3,16 @@ import { memo } from "react";
 
 import "./home.scss";
 
+import { useDispatch } from "react-redux";
+import { showSign } from "@/store/Popup";
+
 const HomePage = memo(() => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(showSign());
+  };
+
   return (
     <div className="mt-36 px-3 pb-9 md:mt-36 xl:mt-44">
       <div className="flex">
@@ -37,7 +46,10 @@ const HomePage = memo(() => {
           </div>
           <div className="flex flex-col items-center lg:items-end">
             <div className="flex flex-col items-center">
-              <label htmlFor="signup" className="btn-std btn mb-3 text-white">
+              <label
+                className="btn-std btn mb-3 text-white"
+                onClick={() => handleClick()}
+              >
                 Записаться
               </label>
               <div className="flex items-center">

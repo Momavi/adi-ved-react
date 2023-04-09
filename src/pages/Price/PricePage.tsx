@@ -6,6 +6,8 @@ import {
   CouchPNG,
 } from "images/index";
 import "./Price.scss";
+import { useDispatch } from "react-redux";
+import { showPriceTable } from "@/store/Popup";
 
 function PriceItem({ title, price }: { title: string; price: number }) {
   return (
@@ -17,6 +19,12 @@ function PriceItem({ title, price }: { title: string; price: number }) {
 }
 
 function PricePage() {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(showPriceTable());
+  };
+
   return (
     <div className="Montserrat mt-48 md:mt-24 md:mt-48 xl:mt-48 xl:px-16">
       <div className="mb-6 justify-between px-2 lg:flex lg:px-0">
@@ -106,8 +114,8 @@ function PricePage() {
                 Оценивается индивидуально по этой таблице
               </span>
               <label
-                htmlFor="signup"
                 className="nav-btn h-8 cursor-pointer text-white"
+                onClick={() => handleClick()}
               >
                 таблица
               </label>

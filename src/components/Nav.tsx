@@ -2,15 +2,25 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useMedia } from "react-use";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { PhoneSVG } from "images/index";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
+
+import { useDispatch } from "react-redux";
+import { showSign } from "@/store/Popup";
+import { PhoneSVG } from "images/index";
+
 import "./Nav.scss";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const isDesktop = useMedia("(min-width: 1024px)");
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(showSign());
+  };
 
   useEffect(() => {
     function handleScroll() {
@@ -79,8 +89,8 @@ function Nav() {
             </label>
 
             <label
-              htmlFor="signup"
               className="nav-btn h-8 cursor-pointer text-white"
+              onClick={handleClick}
             >
               Записаться
             </label>

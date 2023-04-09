@@ -1,31 +1,58 @@
 import { SetStateAction, useState } from "react";
 import "./SignUp.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { showSign } from "@/store/Popup";
 
-function SignUp() {
-  const [selectedDoctor, setSelectedDoctor] = useState("");
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedService, setSelectedService] = useState("");
+function SignUp(): JSX.Element {
+  const [selectedDoctor, setSelectedDoctor] = useState<string>(
+    "natalia_ovchinnikova"
+  );
+  const [selectedDate, setSelectedDate] = useState<string>("01_01_1971");
+  const [selectedService, setSelectedService] = useState<string>("Кастрация");
 
-  const handleDoctorChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+  const handleDoctorChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDoctor(event.target.value);
   };
 
-  const handleDateChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+  const handleDateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDate(event.target.value);
   };
 
-  const handleServiceChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+  const handleServiceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedService(event.target.value);
+  };
+
+  const sign = useSelector((state: any) => state.popup.sign);
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(showSign());
+  };
+
+  const handleClickOutside = (event: React.MouseEvent<HTMLLabelElement>) => {
+    if (event.target === event.currentTarget) {
+      dispatch(showSign());
+    }
+  };
+
+  const handleCheckboxChange = () => {
+    handleClick();
   };
 
   return (
     <>
-      <input type="checkbox" id="signup" className="modal-toggle" />
-      <label htmlFor="signup" className="modal">
+      <input
+        type="checkbox"
+        checked={sign}
+        id="signup"
+        className="modal-toggle"
+        onChange={handleCheckboxChange}
+      />
+      <label className="modal" onClick={handleClickOutside}>
         <label className="modal-box relative">
           <label
-            htmlFor="signup"
             className="btn-sm btn-circle btn absolute right-2 top-2"
+            onClick={handleClick}
           >
             ✕
           </label>
@@ -94,7 +121,9 @@ function SignUp() {
               </select>
             </div>
 
-            <button className="signup-btn btn mt-16">Записаться</button>
+            <button className="signup-btn btn mt-16 text-white">
+              Записаться
+            </button>
           </div>
         </label>
       </label>
