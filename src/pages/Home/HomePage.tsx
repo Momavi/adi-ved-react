@@ -14,7 +14,7 @@ const HomePage = memo(() => {
   };
 
   return (
-    <div className="mt-36 px-3 pb-9 md:mt-36 xl:mt-44">
+    <div className="page mt-36 px-3 pb-9 md:mt-36 xl:mt-44">
       <div className="flex">
         <div className="w-full lg:w-1/2">
           <div className="relative md:pr-8">

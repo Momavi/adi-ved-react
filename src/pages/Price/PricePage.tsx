@@ -26,7 +26,7 @@ function PricePage() {
   };
 
   return (
-    <div className="Montserrat mt-48 md:mt-24 md:mt-48 xl:mt-48 xl:px-16">
+    <div className="Montserrat page mt-48 md:mt-24 md:mt-48 xl:mt-48 xl:px-16">
       <div className="mb-6 justify-between px-2 lg:flex lg:px-0">
         <div className="mb-32 lg:mb-0 lg:w-1/2 lg:pr-16 xl:pr-32 2xl:pr-48">
           <div className="mb-32 rounded-3xl border-2 border-slate-400/30 bg-gradient-to-tr from-slate-100/10 to-gray-100/20 px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:border-slate-600/30 dark:from-slate-500/10 dark:to-gray-500/20">
