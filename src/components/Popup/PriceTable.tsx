@@ -5,9 +5,9 @@ import "./PriceTable.scss";
 
 function PriceItem({ t, p }: any) {
   return (
-    <div className="mb-1 flex w-full justify-between">
+    <div className="mb-2 flex w-full justify-between">
       <span>{t}</span>
-      <span>{p}</span>
+      <span className="ml-8">{p}</span>
     </div>
   );
 }
@@ -45,7 +45,7 @@ function PriceTable() {
       <label className="modal" onClick={handleClickOutside}>
         <label className="modal-box relative w-11/12 max-w-5xl">
           <label
-            className="btn-sm btn-circle btn absolute right-2 top-2"
+            className="btn-sm btn-circle btn sticky top-0 left-full"
             onClick={handleClick}
           >
             ✕
@@ -225,7 +225,9 @@ function PriceTable() {
                 <span>300</span>
               </div>{" "}
             </div>
-            <p className="text-2xl font-bold mt-8">Обслуживание дренажей и швов:</p>
+            <p className="mt-8 text-2xl font-bold">
+              Обслуживание дренажей и швов:
+            </p>
             <div className="w-5/6">
               <PriceItem t="Промывание дренажа (за штуку)" p="100" />
               <PriceItem t="Постановка дренажа (за штуку)" p="500" />

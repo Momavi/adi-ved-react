@@ -55,7 +55,7 @@ function PricePage() {
               <PriceItem title="на токсоплазмоз у кошки" price={1500} />
             </div>
           </div>
-          <div className="rounded-3xl border-2 border-slate-600/40 bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-slate-500/10 dark:to-slate-500/30">
+          <div className="rounded-3xl border-2 border-slate-400/30 bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-slate-500/10 dark:to-slate-500/30">
             <div className="relative flex items-center justify-between pb-8">
               <span className="flex items-end">
                 <ArrowDownLeftSVG />
@@ -78,7 +78,7 @@ function PricePage() {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <div className="mb-32 rounded-3xl border-2 border-slate-600/40 bg-gradient-to-tl bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-neutral-500/10 dark:to-slate-500/20">
+          <div className="mb-32 rounded-3xl border-2 border-slate-400/30 bg-gradient-to-tl bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-neutral-500/10 dark:to-slate-500/20">
             <div className="relative flex items-center justify-between pb-8">
               <span className="flex items-end">
                 <ArrowDownLeftSVG />
@@ -98,7 +98,7 @@ function PricePage() {
               <PriceItem title="ЭКГ" price={1500} />
             </div>
           </div>
-          <div className="mb-16 rounded-3xl border-2 border-slate-700/50 bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-slate-600/40 dark:to-slate-700/70">
+          <div className="mb-16 rounded-3xl border-2 border-slate-400/30 bg-gradient-to-tr px-6 pt-3 pb-4 shadow-lg shadow-cyan-500/30 dark:from-slate-600/40 dark:to-slate-700/70">
             <div className="relative flex items-center justify-between pb-8">
               <span className="flex items-end">
                 <span className="pb-2 pl-2 text-2xl font-bold">
