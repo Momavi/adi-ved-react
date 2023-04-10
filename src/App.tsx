@@ -2,6 +2,7 @@ import { startTransition, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { PathsRouter } from "./PathsRouter";
+import { Transition } from "react-transition-group";
 import Nav from "./components/Nav";
 import SignUp from "./components/SignUp";
 import PriceTable from "./components/Popup/PriceTable";
@@ -46,18 +47,20 @@ function App() {
 
   return (
     <div className="App">
-      <div className="text-black transition-colors duration-1000 dark:text-white">
-        <div className={className}>
-          <header className="md:mx-3 xl:mx-6">
-            <Nav />
-          </header>
-          <div className="mb-5">
-            <PathsRouter />
+      <Transition key={location.pathname} timeout={250} classnames="fade">
+        <div className="text-black transition-colors duration-1000 dark:text-white">
+          <div className={className}>
+            <header className="md:mx-3 xl:mx-6">
+              <Nav />
+            </header>
+            <div className="mb-5">
+              <PathsRouter />
+            </div>
+            {sign ? <SignUp /> : null}
+            {priceTable ? <PriceTable /> : null}
           </div>
-          {sign ? <SignUp /> : null}
-          {priceTable ? <PriceTable /> : null}
         </div>
-      </div>
+      </Transition>
     </div>
   );
 }
