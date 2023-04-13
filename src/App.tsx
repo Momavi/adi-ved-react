@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     startTransition(() => {
       setClassName(
-        `mx-0 px-0 ${
+        `${
           location.pathname === "/employees"
             ? ""
             : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
