@@ -1,11 +1,13 @@
-import { PhoneSVG, EmailSVG, PlaceSVG } from "images/index";
+import { PhoneSVG, EmailSVG, PlaceSVG, room1, room2, room3, room4 } from "images/index";
+import { EffectCoverflow, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Ymap from "components/Ymap";
 import "./contact.scss";
 
 function ContactPage() {
   return (
-    <div className="sm:container page">
-      <div className="mx-1 mb-8 mt-32 md:mt-36 lg:mb-24 lg:flex xl:mt-48">
+    <div className="page sm:container">
+      <div className="mx-1 mb-8 mt-32 md:mt-36 lg:mb-16 lg:flex xl:mt-48">
         <div className="Montserrat w-full lg:w-5/6 lg:pr-16 lg:pl-16">
           <div className="mb-8 text-4xl font-medium preoldmb:mb-16 preoldmb:text-5xl lg:mb-32">
             <p>Запись в три</p>
@@ -38,7 +40,44 @@ function ContactPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-around px-1 md:flex-row md:px-3">
+      <Swiper
+        effect={"coverflow"}
+        loop
+        centeredSlides
+        slidesPerView={2}
+        spaceBetween={50}
+        coverflowEffect={{
+          rotate: 70,
+          stretch: 100,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        modules={[Navigation, EffectCoverflow]}
+        navigation
+      >
+        <SwiperSlide>
+          <figure>
+            <img src={room1} alt="room-1" />
+          </figure>
+        </SwiperSlide>
+        <SwiperSlide>
+          <figure>
+            <img src={room2} alt="room-1" />
+          </figure>
+        </SwiperSlide>
+        <SwiperSlide>
+          <figure>
+            <img src={room3} alt="room-1" />
+          </figure>
+        </SwiperSlide>
+        <SwiperSlide>
+          <figure>
+            <img src={room4} alt="room-1" />
+          </figure>
+        </SwiperSlide>
+      </Swiper>
+      <div className="mb-16 flex flex-col justify-around px-1 md:flex-row md:px-3">
         <div className="mb-4 flex items-center md:mb-0">
           <span className="mr-1 h-6">
             <PhoneSVG />

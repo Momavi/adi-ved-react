@@ -20,7 +20,7 @@ function NavLinks(): JSX.Element {
         <li key={to} className="h-full md:ml-3 xl:ml-4">
           <NavLink
             to={to}
-            className="block h-full border-b-4 border-transparent text-base font-medium transition hover:border-b-[#37daff80] hover:transition-all md:text-base xl:text-lg"
+            className="block h-full border-b-4 border-transparent text-base font-medium transition hover:border-b-[#37daff] hover:transition-all dark:text-white md:text-base xl:hover:border-b-[#37daff80] xl:text-lg"
           >
             {text}
           </NavLink>

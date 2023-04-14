@@ -8,6 +8,10 @@ import SignUp from "./components/SignUp";
 import PriceTable from "./components/Popup/PriceTable";
 import "./App.scss";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/scss/effect-coverflow";
+
 if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -47,12 +51,14 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <header className="md:mx-3 xl:mx-6">
+          <Nav />
+        </header>
+      </div>
       <Transition key={location.pathname} timeout={250} classnames="fade">
         <div className="text-black transition-colors duration-1000 dark:text-white">
           <div className={className}>
-            <header className="md:mx-3 xl:mx-6">
-              <Nav />
-            </header>
             <div className="mb-5">
               <PathsRouter />
             </div>

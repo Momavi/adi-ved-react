@@ -6,16 +6,13 @@ import { SwiperNavButton } from "@/components/SwiperNavButton";
 import { CSSTransition } from "react-transition-group";
 import uuid from "react-uuid";
 
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/effect-coverflow";
-
 import "./Employess.scss";
 
 function EmployeesPage() {
   const [currentEmployeesID, setCurrentEmployees] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
   const nodeRef = useRef(null);
+  const swiperRef = useRef(null);
 
   function changeCurrentEmployees(index: number) {
     if (showMessage) {
@@ -50,7 +47,6 @@ function EmployeesPage() {
     }
     const rect = element.getBoundingClientRect(); // получаем координаты элемента
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // текущая позиция скролла
-    console.log([rect, scrollTop]);
     window.scrollTo({
       top: rect.top - scrollTop - 100,
       behavior: "smooth",
@@ -185,119 +181,128 @@ function EmployeesPage() {
 
   return (
     <>
-      <Swiper
-        effect={"coverflow"}
-        loop
-        centeredSlides
-        coverflowEffect={{
-          rotate: 15,
-          stretch: 100,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1366: {
-            slidesPerView: 2,
-            spaceBetween: -300,
-          },
-          1536: {
-            slidesPerView: 2,
-            spaceBetween: -600,
-          },
-        }}
-        onSlideChange={(swiper) => changeCurrentEmployees(swiper.realIndex)}
-        modules={[Navigation, EffectCoverflow]}
+      <CSSTransition
+        in={true}
+        nodeRef={swiperRef}
+        timeout={300}
+        classNames="alert"
+        unmountOnExit
       >
-        {employeess.map(
-          (
-            { name, speciality, img, experience, review }: any,
-            index: number
-          ) => (
-            <SwiperSlide key={name}>
-              <div className="card w-80 border-2 border-neutral-200 bg-base-300 drop-shadow-xl dark:border-neutral-800 sm:w-96">
-                <figure>
-                  <img src={img} alt={img} />
-                </figure>
-                <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
-                  <div className="rating rating-lg absolute -top-4 ">
-                    <div>
-                      <input
-                        disabled
-                        type="radio"
-                        name="rating-8"
-                        className="mask mask-star-2 bg-orange-400"
-                      />
-                      <input
-                        disabled
-                        type="radio"
-                        name="rating-8"
-                        className="mask mask-star-2 bg-orange-400"
-                      />
-                      <input
-                        disabled
-                        type="radio"
-                        name="rating-8"
-                        className="mask mask-star-2 bg-orange-400"
-                      />
-                      <input
-                        disabled
-                        type="radio"
-                        name="rating-8"
-                        className="mask mask-star-2 bg-orange-400"
-                        checked
-                      />
-                      <input
-                        disabled
-                        type="radio"
-                        name="rating-8"
-                        className="mask mask-star-2 bg-orange-400"
-                      />
+        <Swiper
+          effect={"coverflow"}
+          loop
+          ref={swiperRef}
+          centeredSlides
+          coverflowEffect={{
+            rotate: 15,
+            stretch: 100,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1366: {
+              slidesPerView: 2,
+              spaceBetween: -300,
+            },
+            1536: {
+              slidesPerView: 2,
+              spaceBetween: -600,
+            },
+          }}
+          onSlideChange={(swiper) => changeCurrentEmployees(swiper.realIndex)}
+          modules={[Navigation, EffectCoverflow]}
+        >
+          {employeess.map(
+            (
+              { name, speciality, img, experience, review }: any,
+              index: number
+            ) => (
+              <SwiperSlide key={name}>
+                <div className="card w-80 border-2 border-neutral-200 bg-base-300 drop-shadow-xl dark:border-neutral-800 sm:w-96">
+                  <figure>
+                    <img src={img} alt={img} />
+                  </figure>
+                  <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+                    <div className="rating rating-lg absolute -top-4 ">
+                      <div>
+                        <input
+                          disabled
+                          type="radio"
+                          name="rating-8"
+                          className="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          disabled
+                          type="radio"
+                          name="rating-8"
+                          className="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          disabled
+                          type="radio"
+                          name="rating-8"
+                          className="mask mask-star-2 bg-orange-400"
+                        />
+                        <input
+                          disabled
+                          type="radio"
+                          name="rating-8"
+                          className="mask mask-star-2 bg-orange-400"
+                          checked
+                        />
+                        <input
+                          disabled
+                          type="radio"
+                          name="rating-8"
+                          className="mask mask-star-2 bg-orange-400"
+                        />
+                      </div>
+                    </div>
+                    <h2 className="card-title justify-center">{name}</h2>
+                    <p>{speciality}</p>
+                    <p>Стаж - {experience} лет</p>
+                    <div className="card-actions mt-4 justify-center">
+                      <button className="employeess-btn btn-primary btn-wide btn mb-3">
+                        Записаться
+                      </button>
+                      <button
+                        className="employeess-review-btn btn-primary btn-wide btn"
+                        onClick={() => showReviews()}
+                      >
+                        <span>
+                          {showMessage && currentEmployeesID === index
+                            ? "Закрыть"
+                            : `${review.length} ${getReviewText(
+                                review.length + 1
+                              )}`}
+                        </span>
+                      </button>
                     </div>
                   </div>
-                  <h2 className="card-title justify-center">{name}</h2>
-                  <p>{speciality}</p>
-                  <p>Стаж - {experience} лет</p>
-                  <div className="card-actions mt-4 justify-center">
-                    <button className="employeess-btn btn-primary btn-wide btn mb-3">
-                      Записаться
-                    </button>
-                    <button
-                      className="employeess-review-btn btn-primary btn-wide btn"
-                      onClick={() => showReviews()}
-                    >
-                      <span>
-                        {showMessage && currentEmployeesID === index
-                          ? "Закрыть"
-                          : `${review.length} ${getReviewText(
-                              review.length + 1
-                            )}`}
-                      </span>
-                    </button>
-                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          )
-        )}
-        <SwiperNavButton />
-      </Swiper>
+              </SwiperSlide>
+            )
+          )}
+          <SwiperNavButton />
+        </Swiper>
+      </CSSTransition>
       <div className="container mx-auto mb-24">
         <div className="flex flex-col items-center">
           {employeess.map(

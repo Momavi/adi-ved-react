@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
 function MedCardPage() {
   return (
-    <div>MedCardPage</div>
-  )
+    <div className="mt-64 flex h-full w-full items-center justify-center">
+      <div className="stats bg-primary text-primary-content">
+        <div className="stat">
+          <div className="stat-value">Скоро будет</div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default MedCardPage
+export default MedCardPage;

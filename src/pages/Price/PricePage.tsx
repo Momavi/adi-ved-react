@@ -102,7 +102,7 @@ function PricePage() {
             <div className="relative flex items-center justify-between pb-8">
               <span className="flex items-end">
                 <span className="pb-2 pl-2 text-2xl font-bold">
-                  Хирургические процедуры
+                  Хирургические <p>процедуры</p>
                 </span>
               </span>
               <div className="price-img">

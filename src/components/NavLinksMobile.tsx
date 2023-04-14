@@ -42,24 +42,18 @@ function NavLinksMobile() {
           ))}
           <span className="flex flex-col items-center pt-12">
             <button className="nav-btn visible sm:invisible">Записаться</button>
-            <NavLink
-              to="/medcard"
-              className="nav-link flex rounded-md px-3 py-2 text-base font-medium"
-            >
+            <span className="nav-link flex rounded-md px-3 py-2 text-base font-medium">
               <span className="mr-1 h-6">
                 <PhoneSVG />
               </span>
               +7 (925) 802-95-54
-            </NavLink>
-            <NavLink
-              to="/medcard"
-              className="nav-link flex rounded-md px-3 py-2 text-base font-medium"
-            >
+            </span>
+            <span className="nav-link flex rounded-md px-3 py-2 text-base font-medium">
               <span className="mr-1">
                 <PlaceSVG />
               </span>
               улица Дмитриевского, дом 1, этаж 1
-            </NavLink>
+            </span>
           </span>
         </div>
       </div>

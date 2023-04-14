@@ -60,15 +60,17 @@ function Nav() {
           </div>
           <div className="flex h-full items-start">
             <p className="mr-2 flex h-full cursor-pointer items-start md:mr-3 md:text-base xl:mr-8 xl:text-lg">
-              <span className="mr-2 h-full ">
+              <span className="mr-2 h-full pt-0 dark:text-white">
                 <PhoneSVG />
               </span>
-              <a href="tel: 7 (925) 802-95-54" className="number-text h-full">
+              <a
+                href="tel: 7 (925) 802-95-54"
+                className="number-text h-full pt-1 dark:text-white"
+              >
                 +7 (925) 802-95-54
               </a>
             </p>
-
-            <label className="swap-rotate swap mr-5">
+            <label className="swap-rotate swap mr-5 dark:text-white">
               <input type="checkbox" onClick={() => changeCurrentTheme()} />
 
               <svg
