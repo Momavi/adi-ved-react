@@ -1,1 +1,0 @@
-import{a as e}from"./index-4fee2772.js";function t(){return e("div",{className:"mt-64 flex h-full w-full items-center justify-center",children:e("div",{className:"stats bg-[#37daffae] text-primary-content",children:e("div",{className:"stat",children:e("div",{className:"stat-value",children:"Скоро будет"})})})})}export{t as default};
