@@ -7,11 +7,11 @@ interface NavLinkProps {
 
 function NavLinks(): JSX.Element {
   const links: NavLinkProps[] = [
-    { to: "/", text: "О нас" },
-    { to: "/price", text: "Услуги" },
-    { to: "/employees", text: "Сотрудники" },
-    { to: "/contact", text: "Контакты" },
-    { to: "/medcard", text: "МедКарта" },
+    { to: "/adi-ved-react-/", text: "О нас" },
+    { to: "/adi-ved-react-/price", text: "Услуги" },
+    { to: "/adi-ved-react-/employees", text: "Сотрудники" },
+    { to: "/adi-ved-react-/contact", text: "Контакты" },
+    { to: "/adi-ved-react-/medcard", text: "МедКарта" },
   ];
 
   return (

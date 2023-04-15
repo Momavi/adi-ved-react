@@ -11,11 +11,11 @@ export function PathsRouter() {
   return (
     <Suspense fallback={<div></div>}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/price" element={<Price />} />
-        <Route path="/employees" element={<Employees />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/medcard" element={<MedCard />} />
+        <Route path="/adi-ved-react-/" element={<Home />} />
+        <Route path="/adi-ved-react-/price" element={<Price />} />
+        <Route path="/adi-ved-react-/employees" element={<Employees />} />
+        <Route path="/adi-ved-react-/contact" element={<Contact />} />
+        <Route path="/adi-ved-react-/medcard" element={<MedCard />} />
       </Routes>
     </Suspense>
   );

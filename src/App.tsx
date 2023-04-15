@@ -41,7 +41,7 @@ function App() {
     startTransition(() => {
       setClassName(
         `${
-          location.pathname === "/employees"
+          location.pathname === "/adi-ved-react-/employees"
             ? ""
             : "sm:container oldmb:px-1 sm:mx-auto sm:px-2"
         }`
