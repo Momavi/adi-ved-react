@@ -239,7 +239,7 @@ function EmployeesPage() {
                   <figure>
                     <img src={img} alt={img} />
                   </figure>
-                  <div className="card-body relative items-center rounded-2xl bg-base-100 text-center">
+                  <div className="card-body relative items-center rounded-2xl bg-base-100 py-6 pb-0 text-center">
                     <div className="rating rating-lg absolute -top-4 ">
                       <div>
                         <input
@@ -303,7 +303,9 @@ function EmployeesPage() {
           <SwiperNavButton />
         </Swiper>
       </CSSTransition>
-      <div className="container mx-auto mb-24">
+      <div
+        className={showMessage ? "mx-auto mb-24 container" : "container mx-auto"}
+      >
         <div className="flex flex-col items-center">
           {employeess.map(
             (

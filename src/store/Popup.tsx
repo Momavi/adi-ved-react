@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface PopupState {
-  sign: boolean;
+  reception: boolean;
   priceTable: boolean;
 }
 
 const initialState: PopupState = {
-  sign: false,
+  reception: false,
   priceTable: false,
 };
 
@@ -14,8 +14,8 @@ export const { actions, reducer } = createSlice({
   name: "Popup",
   initialState,
   reducers: {
-    showSign(state) {
-      return { ...state, sign: !state.sign };
+    showReception(state) {
+      return { ...state, reception: !state.reception };
     },
     showPriceTable(state) {
       return { ...state, priceTable: !state.priceTable };
@@ -23,5 +23,5 @@ export const { actions, reducer } = createSlice({
   },
 });
 
-export const { showSign, showPriceTable } = actions;
+export const { showReception, showPriceTable } = actions;
 export default reducer;

@@ -4,13 +4,13 @@ import { memo } from "react";
 import "./home.scss";
 
 import { useDispatch } from "react-redux";
-import { showSign } from "@/store/Popup";
+import { showReception } from "@/store/Popup";
 
 const HomePage = memo(() => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(showSign());
+    dispatch(showReception());
   };
 
   return (
