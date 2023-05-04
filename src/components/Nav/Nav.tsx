@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
 
 import { useDispatch } from "react-redux";
-import { showSign } from "@/store/Popup";
+import { showReception } from "@/store/Popup";
 import { PhoneSVG } from "images/index";
 
 import "./Nav.scss";
@@ -19,7 +19,7 @@ function Nav() {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(showSign());
+    dispatch(showReception());
   };
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function Nav() {
       {isDesktop ? (
         <span className="nav-bg-dark dark:nav-bg-dark align-center flex h-16 items-start justify-between px-2 pt-6 xl:px-5">
           <div className="flex h-full">
-            <Link to="/" className="logo-text">
+            <Link to="/adi-ved-react-/" className="logo-text">
               “АДИ-ВЕД”
             </Link>
             <NavLinks />

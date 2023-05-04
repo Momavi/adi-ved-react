@@ -1,7 +1,7 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import "./SignUp.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { showSign } from "@/store/Popup";
+import { showReception } from "@/store/Popup";
 
 function SignUp(): JSX.Element {
   const [selectedDoctor, setSelectedDoctor] = useState<string>(
@@ -22,16 +22,16 @@ function SignUp(): JSX.Element {
     setSelectedService(event.target.value);
   };
 
-  const sign = useSelector((state: any) => state.popup.sign);
+  const sign = useSelector((state: any) => state.popup.reception);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(showSign());
+    dispatch(showReception());
   };
 
   const handleClickOutside = (event: React.MouseEvent<HTMLLabelElement>) => {
     if (event.target === event.currentTarget) {
-      dispatch(showSign());
+      dispatch(showReception());
     }
   };
 

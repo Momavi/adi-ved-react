@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { PathsRouter } from "./PathsRouter";
 import { Transition } from "react-transition-group";
-import Nav from "./components/Nav";
-import SignUp from "./components/SignUp";
+import Nav from "./components/Nav/Nav";
+import SignUp from "./components/Popup/SignUp";
 import PriceTable from "./components/Popup/PriceTable";
 import "./App.scss";
 
@@ -30,7 +30,7 @@ function App() {
   const [className, setClassName] = useState("");
 
   const sign = useSelector(
-    (state: { popup: { sign: boolean } }) => state.popup.sign
+    (state: { popup: { reception: boolean } }) => state.popup.reception
   );
 
   const priceTable = useSelector(
@@ -59,7 +59,7 @@ function App() {
       <Transition key={location.pathname} timeout={250} classnames="fade">
         <div className="text-black transition-colors duration-1000 dark:text-white">
           <div className={className}>
-            <div className="mb-5">
+            <div>
               <PathsRouter />
             </div>
             {sign ? <SignUp /> : null}
