@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useMedia } from "react-use";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { PhoneSVG } from "images/index";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
 
 import { useDispatch } from "react-redux";
 import { showReception } from "@/store/Popup";
-import { PhoneSVG } from "images/index";
 
 import "./Nav.scss";
 
@@ -54,18 +54,18 @@ function Nav() {
         <span className="nav-bg-dark dark:nav-bg-dark align-center flex h-16 items-start justify-between px-2 pt-6 xl:px-5">
           <div className="flex h-full">
             <Link to="/adi-ved-react-/" className="logo-text">
-              “АДИ-ВЕД”
+              АДИ-ВЕД
             </Link>
             <NavLinks />
           </div>
           <div className="flex h-full items-start">
-            <p className="mr-2 flex h-full cursor-pointer items-start md:mr-3 md:text-base xl:mr-8 xl:text-lg">
-              <span className="mr-2 h-full pt-0 dark:text-white">
+            <p className="mr-2 pb-2 flex h-full cursor-pointer items-center md:mr-3 md:text-base xl:mr-8 xl:text-lg">
+              <span className="mr-2 pt-0 dark:text-white">
                 <PhoneSVG />
               </span>
               <a
                 href="tel: 7 (925) 802-95-54"
-                className="number-text h-full pt-1 dark:text-white"
+                className="number-text pt-1 dark:text-white"
               >
                 +7 (925) 802-95-54
               </a>
@@ -103,7 +103,12 @@ function Nav() {
           <Link to="/" className="logo-text">
             “АДИ-ВЕД”
           </Link>
-          <button className="nav-btn hidden sm:block">Записаться</button>
+          <label
+            className="nav-btn hidden h-8 cursor-pointer text-white sm:block"
+            onClick={handleClick}
+          >
+            Записаться
+          </label>
           <div className="-mr-2 flex lg:hidden">
             <label className="swap-rotate swap mr-5">
               <input type="checkbox" onClick={() => changeCurrentTheme()} />

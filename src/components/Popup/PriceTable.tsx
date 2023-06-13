@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { showPriceTable } from "@/store/Popup";
 
-import "./PriceTable.scss";
-
 function PriceItem({ t, p }: any) {
   return (
     <div className="mb-2 flex w-full justify-between">

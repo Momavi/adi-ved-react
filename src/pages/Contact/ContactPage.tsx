@@ -28,7 +28,7 @@ function ContactPage() {
               className="contact-input mb-8 w-full bg-transparent px-2 py-2"
             />
             <div className="mb-12 flex w-full flex-col items-center lg:mb-0">
-              <button className="contact-btn visible text-white">
+              <button className="btn-std h-10 text-white">
                 мы вам позвоним
               </button>
             </div>

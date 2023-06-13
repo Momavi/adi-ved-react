@@ -1,11 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface PopupState {
+  register: boolean;
+  login: boolean;
   reception: boolean;
   priceTable: boolean;
 }
 
 const initialState: PopupState = {
+  register: false,
+  login: false,
   reception: false,
   priceTable: false,
 };

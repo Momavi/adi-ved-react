@@ -12,7 +12,9 @@
   },
   "parserOptions": {
     "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
+    "tsconfigRootDir": "./",
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
   "rules": {
     "import/no-unresolved": "error",

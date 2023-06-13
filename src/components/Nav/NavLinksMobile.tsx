@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { PlaceSVG, PhoneSVG } from "images/index";
 import { Transition } from "@headlessui/react";
+import { showReception } from "@/store/Popup";
+import { useDispatch } from "react-redux";
 
 interface LinksTypes {
   to: string;
@@ -16,6 +18,12 @@ const Links: LinksTypes[] = [
 ];
 
 function NavLinksMobile() {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(showReception());
+  };
+
   return (
     <Transition
       show={true}
@@ -41,7 +49,12 @@ function NavLinksMobile() {
             </NavLink>
           ))}
           <span className="flex flex-col items-center pt-12">
-            <button className="nav-btn visible sm:invisible">Записаться</button>
+            <label
+              className="nav-btn h-8 cursor-pointer text-white sm:block"
+              onClick={handleClick}
+            >
+              Записаться
+            </label>
             <span className="nav-link flex rounded-md px-3 py-2 text-base font-medium">
               <span className="mr-1 h-6">
                 <PhoneSVG />

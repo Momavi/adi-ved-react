@@ -2,29 +2,25 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showReception } from "@/store/Popup";
 
-import "./SignUp.scss";
-
-function SignUp(): JSX.Element {
-  const [selectedDoctor, setSelectedDoctor] = useState<string>(
-    "natalia_ovchinnikova"
-  );
-  const [selectedDate, setSelectedDate] = useState<string>("01_01_1971");
-  const [selectedService, setSelectedService] = useState<string>("Кастрация");
-
+function RegisterForm(): JSX.Element {
+  const [selectedDoctor, setSelectedDoctor] = useState<string>();
+  const [selectedDate, setSelectedDate] = useState<string>();
+  const [selectedService, setSelectedService] = useState<string>();
   const reception = useSelector((state: any) => state.popup.reception);
+
   const dispatch = useDispatch();
 
   function handleDoctorChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedDoctor(event.target.value);
   }
 
-  const handleDateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  function handleDateChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedDate(event.target.value);
-  };
+  }
 
-  const handleServiceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  function handleServiceChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedService(event.target.value);
-  };
+  }
 
   function handleClick() {
     dispatch(showReception());
@@ -132,4 +128,4 @@ function SignUp(): JSX.Element {
   );
 }
 
-export default SignUp;
+export default RegisterForm;

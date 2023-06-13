@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import popupReducer from "./Popup";
+import medcardReducer from "./MedCard";
 
 export const store = configureStore({
   reducer: {
     popup: popupReducer,
+    medcard: medcardReducer,
   },
 });
 

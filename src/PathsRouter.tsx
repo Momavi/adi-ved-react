@@ -6,6 +6,7 @@ const Price = lazy(() => import("./pages/Price/PricePage"));
 const Employees = lazy(() => import("./pages/Employees/EmployeesPage"));
 const Contact = lazy(() => import("./pages/Contact/ContactPage"));
 const MedCard = lazy(() => import("./pages/MedCard/MedCardPage"));
+const LoginPage = lazy(() => import("./pages/Verification/LoginPage"));
 
 export function PathsRouter() {
   return (
@@ -16,6 +17,7 @@ export function PathsRouter() {
         <Route path="/adi-ved-react-/employees" element={<Employees />} />
         <Route path="/adi-ved-react-/contact" element={<Contact />} />
         <Route path="/adi-ved-react-/medcard" element={<MedCard />} />
+        <Route path="/adi-ved-react-/login" element={<LoginPage />} />
       </Routes>
     </Suspense>
   );

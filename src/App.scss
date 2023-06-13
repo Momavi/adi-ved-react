@@ -62,32 +62,32 @@ li {
 }
 
 // Путь к файлам шрифта
-$tttravels-font-path: '../fonts/TT/';
+$travels-font-path: '../fonts/TT/';
 
 // Подключение шрифтов
 @font-face {
   font-family: 'TTTravels';
-  src: url('#{$tttravels-font-path}TTTravels-Regular.ttf') format('truetype'),
-  url('#{$tttravels-font-path}TTTravels-Regular.woff') format('woff'),
-  url('#{$tttravels-font-path}TTTravels-Regular.eot') format('eot');
+  src: url('#{$travels-font-path}TTTravels-Regular.ttf') format('truetype'),
+  url('#{$travels-font-path}TTTravels-Regular.woff') format('woff'),
+  url('#{$travels-font-path}TTTravels-Regular.eot') format('eot');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TTTravels';
-  src: url('#{$tttravels-font-path}TTTravels-DemiBold.ttf') format('truetype'),
-  url('#{$tttravels-font-path}TTTravels-DemiBold.woff') format('woff'),
-  url('#{$tttravels-font-path}TTTravels-DemiBold.eot') format('eot');
+  src: url('#{$travels-font-path}TTTravels-DemiBold.ttf') format('truetype'),
+  url('#{$travels-font-path}TTTravels-DemiBold.woff') format('woff'),
+  url('#{$travels-font-path}TTTravels-DemiBold.eot') format('eot');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TTTravels';
-  src: url('#{$tttravels-font-path}TTTravels-Bold.ttf') format('truetype'),
-  url('#{$tttravels-font-path}TTTravels-Bold.woff') format('woff'),
-  url('#{$tttravels-font-path}TTTravels-Bold.eot') format('eot');
+  src: url('#{$travels-font-path}TTTravels-Bold.ttf') format('truetype'),
+  url('#{$travels-font-path}TTTravels-Bold.woff') format('woff'),
+  url('#{$travels-font-path}TTTravels-Bold.eot') format('eot');
   font-weight: 800;
   font-style: normal;
 }

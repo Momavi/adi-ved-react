@@ -62,9 +62,9 @@ const HomePage = memo(() => {
           </div>
         </div>
         <div className="hidden w-1/2 lg:block">
-          <div className="container-cat ml-5 transition duration-300 ease-in-out hover:scale-105 xl:ml-36 xl:hover:-translate-x-1">
+          <div className="container-cat ml-5 xl:ml-36">
             <img
-              className="cat duration-0 transition hover:duration-150"
+              className="cat"
               src={Cat}
               alt="Cat"
             />
